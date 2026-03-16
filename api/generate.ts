@@ -1,8 +1,16 @@
-import Anthropic from '@anthropic-ai/sdk'
-
 export const config = { runtime: 'edge' }
 
 export default async function handler(req: Request): Promise<Response> {
+  if (req.method === 'OPTIONS') {
+    return new Response(null, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+    })
+  }
+
   if (req.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 })
   }
@@ -15,7 +23,7 @@ export default async function handler(req: Request): Promise<Response> {
     })
   }
 
-  let body: unknown
+  let body: { prompt?: string }
   try {
     body = await req.json()
   } catch {
@@ -25,8 +33,7 @@ export default async function handler(req: Request): Promise<Response> {
     })
   }
 
-  const { prompt } = body as { prompt: string }
-  if (!prompt) {
+  if (!body.prompt) {
     return new Response(JSON.stringify({ error: 'Missing prompt' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
@@ -34,16 +41,35 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   try {
-    const client = new Anthropic({ apiKey })
-    const message = await client.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 4096,
-      messages: [{ role: 'user', content: prompt }],
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 4096,
+        messages: [{ role: 'user', content: body.prompt }],
+      }),
     })
 
-    const text = message.content
-      .filter(block => block.type === 'text')
-      .map(block => (block as { type: 'text'; text: string }).text)
+    if (!response.ok) {
+      const err = await response.text()
+      return new Response(JSON.stringify({ error: err }), {
+        status: response.status,
+        headers: { 'Content-Type': 'application/json' },
+      })
+    }
+
+    const data = await response.json() as {
+      content: Array<{ type: string; text: string }>
+    }
+
+    const text = data.content
+      .filter(b => b.type === 'text')
+      .map(b => b.text)
       .join('')
 
     return new Response(JSON.stringify({ text }), {
