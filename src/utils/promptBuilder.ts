@@ -1,4 +1,4 @@
-import type { Topic, Grade } from '../src/types'
+import type { Topic, Grade } from '../types'
 
 // ─── 请求/响应类型 ───────────────────────────────────────────
 
