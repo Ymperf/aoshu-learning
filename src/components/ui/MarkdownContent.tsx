@@ -39,11 +39,18 @@ export default function MarkdownContent({ content, className = '' }: Props) {
         },
         strong: ({ children }) => <strong className="font-semibold text-gray-900">{children}</strong>,
         em: ({ children }) => <em className="italic text-gray-700">{children}</em>,
-        svg: ({ children, ...props }) => (
-          <svg {...props} className="mx-auto my-4">
-            {children}
+        svg: ({ node, ...props }) => (
+          <svg {...props} className="mx-auto my-4 block">
+            {props.children}
           </svg>
         ),
+        polygon: ({ node, ...props }) => <polygon {...props} />,
+        line: ({ node, ...props }) => <line {...props} />,
+        circle: ({ node, ...props }) => <circle {...props} />,
+        rect: ({ node, ...props }) => <rect {...props} />,
+        path: ({ node, ...props }) => <path {...props} />,
+        text: ({ node, ...props }) => <text {...props} />,
+        g: ({ node, ...props }) => <g {...props} />,
       }}
     >
       {content}
