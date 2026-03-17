@@ -127,7 +127,30 @@ export const grade5Contents: Record<string, TopicContent> = {
 1m³ = 1000dm³ = 1000000cm³`,
     examples: [
       {
-        problem: '一个长方体，长5cm，宽4cm，高3cm，求表面积和体积。',
+        problem: `一个长方体，长5cm，宽4cm，高3cm，求表面积和体积。
+
+<svg width="350" height="240" viewBox="0 0 350 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- 长方体立体图 -->
+  <!-- 前面 -->
+  <polygon points="80,120 180,120 180,180 80,180" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <!-- 顶面 -->
+  <polygon points="80,120 180,120 220,90 120,90" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <!-- 右侧面 -->
+  <polygon points="180,120 220,90 220,150 180,180" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 标注 -->
+  <text x="130" y="205" font-size="13" fill="#374151" text-anchor="middle">长 5cm</text>
+  <line x1="80" y1="195" x2="180" y2="195" stroke="#374151" stroke-width="1"/>
+
+  <text x="50" y="150" font-size="13" fill="#374151" text-anchor="middle">高 3cm</text>
+  <line x1="65" y1="120" x2="65" y2="180" stroke="#374151" stroke-width="1"/>
+
+  <text x="240" y="120" font-size="13" fill="#374151" text-anchor="start">宽 4cm</text>
+  <line x1="220" y1="90" x2="220" y2="150" stroke="#374151" stroke-width="1"/>
+
+  <!-- 公式 -->
+  <text x="175" y="225" font-size="11" fill="#2563eb" text-anchor="middle">表面积 = 2(长×宽+长×高+宽×高)</text>
+</svg>`,
         solution: `表面积 = 2×(5×4+5×3+4×3) = 2×47 = **94cm²**
 
 体积 = 5×4×3 = **60cm³**`,
@@ -200,7 +223,36 @@ export const grade5Contents: Record<string, TopicContent> = {
 - 水速 = (顺水速度-逆水速度) ÷ 2`,
     examples: [
       {
-        problem: '一列火车长200m，以72千米/时的速度通过一座长1000m的桥，需要多少秒？',
+        problem: `一列火车长200m，以72千米/时的速度通过一座长1000m的桥，需要多少秒？
+
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 桥 -->
+  <rect x="50" y="120" width="300" height="20" fill="#94a3b8" stroke="#374151" stroke-width="2"/>
+  <text x="200" y="160" font-size="13" fill="#374151" text-anchor="middle">桥长 1000m</text>
+
+  <!-- 火车（初始位置） -->
+  <rect x="30" y="90" width="60" height="25" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  <text x="60" y="107" font-size="11" fill="white" text-anchor="middle" font-weight="bold">火车</text>
+  <text x="60" y="75" font-size="12" fill="#2563eb" text-anchor="middle">车长200m</text>
+
+  <!-- 火车（完全通过后位置，虚线） -->
+  <rect x="290" y="90" width="60" height="25" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="320" y="75" font-size="11" fill="#dc2626" text-anchor="middle">完全通过</text>
+
+  <!-- 箭头表示运动 -->
+  <path d="M 100 102 L 280 102" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+  <text x="190" y="95" font-size="12" fill="#fbbf24" text-anchor="middle">72km/h = 20m/s</text>
+
+  <!-- 总路程标注 -->
+  <line x1="30" y1="170" x2="350" y2="170" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="190" y="185" font-size="13" fill="#dc2626" text-anchor="middle">总路程 = 桥长 + 车长 = 1200m</text>
+
+  <defs>
+    <marker id="arrow-yellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#fbbf24"/>
+    </marker>
+  </defs>
+</svg>`,
         solution: `速度 = 72千米/时 = 20m/s
 
 路程 = 桥长+车长 = 1000+200 = 1200m
@@ -318,7 +370,24 @@ export const grade5Contents: Record<string, TopicContent> = {
 将圆与其他图形组合，用加减法计算面积。`,
     examples: [
       {
-        problem: '一个圆形花坛，半径为 5m，求周长和面积。（π取3.14）',
+        problem: `一个圆形花坛，半径为 5m，求周长和面积。（π取3.14）
+
+<svg width="320" height="280" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- 圆 -->
+  <circle cx="160" cy="130" r="80" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 半径 -->
+  <line x1="160" y1="130" x2="240" y2="130" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="160" cy="130" r="4" fill="#dc2626"/>
+  <text x="200" y="120" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">r = 5m</text>
+
+  <!-- 圆心标注 -->
+  <text x="160" y="150" font-size="12" fill="#374151" text-anchor="middle">O</text>
+
+  <!-- 公式 -->
+  <text x="160" y="240" font-size="13" fill="#2563eb" text-anchor="middle">周长 C = 2πr</text>
+  <text x="160" y="260" font-size="13" fill="#2563eb" text-anchor="middle">面积 S = πr²</text>
+</svg>`,
         solution: `周长 = 2×3.14×5 = **31.4m**
 
 面积 = 3.14×5² = **78.5m²**`,

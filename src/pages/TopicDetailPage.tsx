@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { TOPICS, GRADE_LABELS } from '../data/curriculum'
 import ExampleProblem from '../components/explanation/ExampleProblem'
+import MarkdownContent from '../components/ui/MarkdownContent'
 import { generateTopicContent } from '../api/claude'
 import { useProgress } from '../hooks/useProgress'
 import type { TopicContent } from '../types'
@@ -100,9 +101,7 @@ export default function TopicDetailPage() {
             <>
               <div className="bg-white rounded-xl border border-gray-200 p-5">
                 <h2 className="text-base font-semibold text-gray-900 mb-3">知识点讲解</h2>
-                <div className="text-gray-700 whitespace-pre-line leading-relaxed text-sm">
-                  {content.explanation}
-                </div>
+                <MarkdownContent content={content.explanation} className="text-sm" />
               </div>
               <div className="space-y-3">
                 <h2 className="text-base font-semibold text-gray-900">例题解析</h2>

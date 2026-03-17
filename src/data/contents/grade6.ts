@@ -136,7 +136,34 @@ b = 12×180÷36 = **60**
 面积 = 3.14×25 = **78.5m²**`,
       },
       {
-        problem: '一个扇形，半径6cm，圆心角60°，求扇形面积和弧长。（π取3.14）',
+        problem: `一个扇形，半径6cm，圆心角60°，求扇形面积和弧长。（π取3.14）
+
+<svg width="320" height="280" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- 扇形 -->
+  <path d="M 160 140 L 212 70 A 80 80 0 0 1 240 140 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 半径线 -->
+  <line x1="160" y1="140" x2="212" y2="70" stroke="#dc2626" stroke-width="2"/>
+  <line x1="160" y1="140" x2="240" y2="140" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- 圆心 -->
+  <circle cx="160" cy="140" r="4" fill="#dc2626"/>
+  <text x="150" y="155" font-size="12" fill="#374151" text-anchor="end">O</text>
+
+  <!-- 半径标注 -->
+  <text x="186" y="100" font-size="13" fill="#dc2626" text-anchor="middle">r=6cm</text>
+
+  <!-- 圆心角标注 -->
+  <path d="M 180 140 A 20 20 0 0 0 172 125" fill="none" stroke="#059669" stroke-width="2"/>
+  <text x="190" y="130" font-size="13" fill="#059669" text-anchor="start" font-weight="bold">60°</text>
+
+  <!-- 弧长标注 -->
+  <text x="226" y="100" font-size="12" fill="#2563eb" text-anchor="middle">弧长</text>
+
+  <!-- 公式 -->
+  <text x="160" y="230" font-size="12" fill="#2563eb" text-anchor="middle">扇形面积 = πr² × (n/360)</text>
+  <text x="160" y="250" font-size="12" fill="#2563eb" text-anchor="middle">弧长 = 2πr × (n/360)</text>
+</svg>`,
         solution: `扇形面积 = 3.14×36×(60÷360) = **18.84cm²**
 
 弧长 = 2×3.14×6×(60÷360) = **6.28cm**`,
@@ -249,7 +276,52 @@ Sₙ = Σk² + Σk = n(n+1)(2n+1)/6 + n(n+1)/2
 A、B两地间来回，第n次相遇时两人共走 (2n-1) 个全程。`,
     examples: [
       {
-        problem: '船顺流从A到B需2小时，逆流从B到A需3小时，AB距离60千米，求船速和水速。',
+        problem: `船顺流从A到B需2小时，逆流从B到A需3小时，AB距离60千米，求船速和水速。
+
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- 河流 -->
+  <rect x="50" y="80" width="300" height="80" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 水流方向 -->
+  <path d="M 80 120 L 140 120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow-water)"/>
+  <path d="M 160 120 L 220 120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow-water)"/>
+  <path d="M 240 120 L 300 120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow-water)"/>
+  <text x="200" y="110" font-size="12" fill="#60a5fa" text-anchor="middle">水流方向</text>
+
+  <!-- A地和B地 -->
+  <circle cx="70" cy="120" r="8" fill="#2563eb"/>
+  <text x="70" y="65" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">A地</text>
+
+  <circle cx="330" cy="120" r="8" fill="#dc2626"/>
+  <text x="330" y="65" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">B地</text>
+
+  <!-- 顺流 -->
+  <path d="M 90 100 L 310 100" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="200" y="95" font-size="12" fill="#059669" text-anchor="middle">顺流 2小时</text>
+
+  <!-- 逆流 -->
+  <path d="M 310 140 L 90 140" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red6)"/>
+  <text x="200" y="155" font-size="12" fill="#dc2626" text-anchor="middle">逆流 3小时</text>
+
+  <!-- 距离标注 -->
+  <text x="200" y="50" font-size="13" fill="#374151" text-anchor="middle">AB距离 60千米</text>
+
+  <!-- 公式 -->
+  <text x="200" y="190" font-size="12" fill="#374151" text-anchor="middle">顺流速度 = 船速 + 水速</text>
+  <text x="200" y="210" font-size="12" fill="#374151" text-anchor="middle">逆流速度 = 船速 - 水速</text>
+
+  <defs>
+    <marker id="arrow-water" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 8 2.5, 0 5" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrow-red6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>`,
         solution: `顺流速度 = 60÷2 = 30千米/时
 逆流速度 = 60÷3 = 20千米/时
 
@@ -288,7 +360,45 @@ A、B两地间来回，第n次相遇时两人共走 (2n-1) 个全程。`,
 - 注意单位换算`,
     examples: [
       {
-        problem: '一个圆柱形水桶，底面半径10cm，高20cm，装满水后倒入一个长方体容器（长25cm，宽20cm），水深多少cm？（π取3.14）',
+        problem: `一个圆柱形水桶，底面半径10cm，高20cm，装满水后倒入一个长方体容器（长25cm，宽20cm），水深多少cm？（π取3.14）
+
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- 圆柱 -->
+  <ellipse cx="100" cy="80" rx="40" ry="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="80" width="80" height="80" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="100" cy="160" rx="40" ry="12" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+
+  <text x="100" y="120" font-size="12" fill="#2563eb" text-anchor="middle">r=10cm</text>
+  <text x="45" y="120" font-size="12" fill="#2563eb" text-anchor="end">h=20cm</text>
+
+  <!-- 箭头 -->
+  <path d="M 150 120 L 210 120" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow-transfer)"/>
+  <text x="180" y="110" font-size="11" fill="#fbbf24" text-anchor="middle">倒入</text>
+
+  <!-- 长方体容器 -->
+  <g transform="translate(220, 60)">
+    <!-- 前面 -->
+    <rect x="0" y="60" width="100" height="80" fill="none" stroke="#059669" stroke-width="2"/>
+    <!-- 水 -->
+    <rect x="0" y="97" width="100" height="43" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+
+    <!-- 顶面 -->
+    <polygon points="0,60 20,50 120,50 100,60" fill="none" stroke="#059669" stroke-width="2"/>
+    <!-- 右侧面 -->
+    <polygon points="100,60 120,50 120,130 100,140" fill="none" stroke="#059669" stroke-width="2"/>
+
+    <text x="50" y="55" font-size="11" fill="#059669" text-anchor="middle">25cm×20cm</text>
+    <text x="110" y="120" font-size="11" fill="#dc2626" text-anchor="start">h=?</text>
+  </g>
+
+  <text x="200" y="220" font-size="12" fill="#374151" text-anchor="middle">体积相等：πr²h圆柱 = 长×宽×h长方体</text>
+
+  <defs>
+    <marker id="arrow-transfer" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#fbbf24"/>
+    </marker>
+  </defs>
+</svg>`,
         solution: `圆柱体积 = 3.14×10²×20 = 6280cm³
 
 长方体水深 = 6280÷(25×20) = 6280÷500 = **12.56cm**`,

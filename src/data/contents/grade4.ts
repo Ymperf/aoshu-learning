@@ -23,7 +23,47 @@ export const grade4Contents: Record<string, TopicContent> = {
 找准"不变量"：相遇问题中路程之和不变；追及问题中路程差不变。`,
     examples: [
       {
-        problem: '甲乙两人从相距 120 千米的两地相向而行，甲速 30 千米/时，乙速 10 千米/时，几小时后相遇？',
+        problem: `甲乙两人从相距 120 千米的两地相向而行，甲速 30 千米/时，乙速 10 千米/时，几小时后相遇？
+
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 路线 -->
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#94a3b8" stroke-width="4"/>
+
+  <!-- A地和B地 -->
+  <circle cx="50" cy="100" r="10" fill="#2563eb"/>
+  <text x="50" y="80" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">A地</text>
+
+  <circle cx="350" cy="100" r="10" fill="#dc2626"/>
+  <text x="350" y="80" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">B地</text>
+
+  <!-- 距离标注 -->
+  <text x="200" y="120" font-size="14" fill="#374151" text-anchor="middle">120千米</text>
+
+  <!-- 甲的路径 -->
+  <path d="M 70 100 L 170 100" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-blue4)"/>
+  <text x="120" y="90" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">甲 30km/h</text>
+  <text x="120" y="135" font-size="11" fill="#2563eb" text-anchor="middle">3小时走90km</text>
+
+  <!-- 乙的路径 -->
+  <path d="M 330 100 L 230 100" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red4)"/>
+  <text x="280" y="90" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">乙 10km/h</text>
+  <text x="280" y="135" font-size="11" fill="#dc2626" text-anchor="middle">3小时走30km</text>
+
+  <!-- 相遇点 -->
+  <circle cx="200" cy="100" r="8" fill="#fbbf24"/>
+  <text x="200" y="160" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="bold">相遇点</text>
+
+  <defs>
+    <marker id="arrow-blue4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-red4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="200" y="180" font-size="12" fill="#374151" text-anchor="middle">相遇时间 = 120 ÷ (30+10) = 3小时</text>
+</svg>`,
         solution: `相遇时间 = 120 ÷ (30+10) = **3 小时**
 
 验证：甲走90千米，乙走30千米，90+30=120 ✓`,
@@ -129,7 +169,27 @@ a = b × q + r（0 ≤ r < b）`,
 **补：** 补全成规则图形，总面积减去补充部分。`,
     examples: [
       {
-        problem: '一个梯形，上底6cm，下底10cm，高4cm，求面积。',
+        problem: `一个梯形，上底6cm，下底10cm，高4cm，求面积。
+
+<svg width="350" height="220" viewBox="0 0 350 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- 梯形 -->
+  <polygon points="100,50 220,50 260,150 60,150" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 高线 -->
+  <line x1="160" y1="50" x2="160" y2="150" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="170" y="100" font-size="13" fill="#dc2626" text-anchor="start">高4cm</text>
+
+  <!-- 上底标注 -->
+  <line x1="100" y1="40" x2="220" y2="40" stroke="#374151" stroke-width="1"/>
+  <text x="160" y="30" font-size="13" fill="#374151" text-anchor="middle">上底 6cm</text>
+
+  <!-- 下底标注 -->
+  <line x1="60" y1="165" x2="260" y2="165" stroke="#374151" stroke-width="1"/>
+  <text x="160" y="185" font-size="13" fill="#374151" text-anchor="middle">下底 10cm</text>
+
+  <!-- 公式 -->
+  <text x="175" y="210" font-size="12" fill="#2563eb" text-anchor="middle">面积 = (上底+下底) × 高 ÷ 2</text>
+</svg>`,
         solution: `面积 = (6+10)×4÷2 = **32 cm²**`,
       },
       {
@@ -346,7 +406,25 @@ LCM = 48×36÷12 = **144**`,
 - 平行四边形：对边平行且相等，对角相等`,
     examples: [
       {
-        problem: '一个三角形，最大角是最小角的2倍，第三个角比最小角大30°，求三个角的度数。',
+        problem: `一个三角形，最大角是最小角的2倍，第三个角比最小角大30°，求三个角的度数。
+
+<svg width="380" height="240" viewBox="0 0 380 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- 三角形 -->
+  <polygon points="190,40 320,180 60,180" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 角度标注 -->
+  <text x="190" y="60" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">2x°</text>
+  <text x="190" y="75" font-size="11" fill="#dc2626" text-anchor="middle">(最大角)</text>
+
+  <text x="80" y="170" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">x°</text>
+  <text x="80" y="185" font-size="11" fill="#2563eb" text-anchor="middle">(最小角)</text>
+
+  <text x="300" y="170" font-size="14" fill="#059669" text-anchor="middle" font-weight="bold">(x+30)°</text>
+  <text x="300" y="185" font-size="11" fill="#059669" text-anchor="middle">(第三个角)</text>
+
+  <!-- 方程 -->
+  <text x="190" y="220" font-size="13" fill="#374151" text-anchor="middle">x + 2x + (x+30) = 180°</text>
+</svg>`,
         solution: `设最小角为x°：x + 2x + (x+30) = 180
 
 4x = 150，x = 37.5°
