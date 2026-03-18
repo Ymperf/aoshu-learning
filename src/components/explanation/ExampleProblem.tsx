@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { WorkedExample } from '../../types'
 import MarkdownContent from '../ui/MarkdownContent'
+import SpeechButton from '../ui/SpeechButton'
 
 interface Props {
   example: WorkedExample
@@ -13,7 +14,10 @@ export default function ExampleProblem({ example, index }: Props) {
   return (
     <div className="border border-gray-200 rounded-xl overflow-hidden">
       <div className="bg-gray-50 px-4 py-3">
-        <p className="text-sm font-medium text-gray-500 mb-1">例题 {index + 1}</p>
+        <div className="flex items-center justify-between mb-1">
+          <p className="text-sm font-medium text-gray-500">例题 {index + 1}</p>
+          <SpeechButton text={example.problem + ' ' + example.solution} />
+        </div>
         <MarkdownContent content={example.problem} />
       </div>
       <div className="px-4 py-3">
