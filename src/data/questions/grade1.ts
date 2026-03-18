@@ -58,7 +58,13 @@ export const grade1Questions: Record<string, Question[]> = {
     { id: 'q6', topicId: 'g1-geometry', type: 'true_false', difficulty: 'medium', prompt: '正方形是特殊的长方形。', isTrue: true, explanation: '正方形4边相等，是长方形的特例，正确。' },
     { id: 'q7', topicId: 'g1-geometry', type: 'step_solution', difficulty: 'medium', prompt: '用6根小棒摆三角形，每个三角形用3根，可以摆几个？', steps: ['每个三角形需要3根', '共有6根', '6 ÷ 3 = 2', '答：可以摆2个三角形'], explanation: '总数÷每份数=份数。' },
     { id: 'q8', topicId: 'g1-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: '下面哪个图形的边数最多？', options: ['三角形', '正方形', '五边形', '圆形'], correctIndex: 2, explanation: '三角形3边，正方形4边，五边形5边，圆形无边。五边形最多。' },
-    { id: 'q9', topicId: 'g1-geometry', type: 'fill_blank', difficulty: 'hard', prompt: '一个正方形剪掉一个角后，还剩___个角。', correctAnswer: '5', acceptedAnswers: ['五', '5个', '3', '三', '3个'], explanation: '沿边剪得5个角，沿对角线剪得3个角，常见答案是5。' },
+    { id: 'q9', topicId: 'g1-geometry', type: 'fill_blank', difficulty: 'hard', prompt: `一个正方形剪掉一个角后，还剩___个角。
+
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="40,30 120,30 120,110 60,110 60,70 40,70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="120" y1="30" x2="60" y2="70" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="90" y="45" font-size="12" fill="#dc2626">剪掉</text>
+</svg>`, correctAnswer: '5', acceptedAnswers: ['五', '5个', '3', '三', '3个'], explanation: '沿边剪得5个角，沿对角线剪得3个角，常见答案是5。' },
     { id: 'q10', topicId: 'g1-geometry', type: 'true_false', difficulty: 'hard', prompt: '所有的四边形都是长方形。', isTrue: false, explanation: '四边形包括正方形、梯形、平行四边形等，不都是长方形，错误。' },
   ],
   'g1-number_fill': [
@@ -89,10 +95,23 @@ export const grade1Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g1-match', type: 'multiple_choice', difficulty: 'easy', prompt: '用3根火柴棒能摆一个三角形，摆2个三角形需要几根？', options: ['5根', '6根', '7根', '8根'], correctIndex: 1, explanation: '2 × 3 = 6根（不共边）。' },
     { id: 'q2', topicId: 'g1-match', type: 'fill_blank', difficulty: 'easy', prompt: '一个正方形需要___根火柴棒。', correctAnswer: '4', acceptedAnswers: ['四', '4根'], explanation: '正方形4条边，需要4根。' },
     { id: 'q3', topicId: 'g1-match', type: 'true_false', difficulty: 'easy', prompt: '用4根火柴棒可以摆一个正方形。', isTrue: true, explanation: '正方形4条边，4根刚好，正确。' },
-    { id: 'q4', topicId: 'g1-match', type: 'multiple_choice', difficulty: 'medium', prompt: '用火柴棒摆一排正方形，摆3个共用几根？', options: ['10根', '11根', '12根', '13根'], correctIndex: 0, explanation: '第1个4根，之后每个加3根：4 + 3×2 = 10根。' },
+    { id: 'q4', topicId: 'g1-match', type: 'multiple_choice', difficulty: 'medium', prompt: `用火柴棒摆一排正方形，摆3个共用几根？
+
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <rect x="50" y="10" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <rect x="90" y="10" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+</svg>`, options: ['10根', '11根', '12根', '13根'], correctIndex: 0, explanation: '第1个4根，之后每个加3根：4 + 3×2 = 10根。' },
     { id: 'q5', topicId: 'g1-match', type: 'fill_blank', difficulty: 'medium', prompt: '12根火柴棒摆成一排正方形，能摆___个。', correctAnswer: '4', acceptedAnswers: ['四', '4个'], explanation: '第1个4根，之后每个3根：(12-4)÷3+1 = 4个。' },
     { id: 'q6', topicId: 'g1-match', type: 'true_false', difficulty: 'medium', prompt: '移动1根火柴棒可以把"6"变成"9"。', isTrue: true, explanation: '将6旋转180°即为9，移动1根可实现，正确。' },
-    { id: 'q7', topicId: 'g1-match', type: 'step_solution', difficulty: 'medium', prompt: '用火柴棒摆"田"字形，需要几根？', steps: ['田字形是2×1的正方形网格', '横线：3行×2根=6根', '竖线：3列×1根=3根', '共6+3=9根', '答：需要9根火柴棒'], explanation: '分横竖分别计算。' },
+    { id: 'q7', topicId: 'g1-match', type: 'step_solution', difficulty: 'medium', prompt: `用火柴棒摆"田"字形，需要几根？
+
+<svg width="110" height="110" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <rect x="60" y="10" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <rect x="10" y="60" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <rect x="60" y="60" width="40" height="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+</svg>`, steps: ['田字形是2×2的正方形网格', '横线：3行×2根=6根', '竖线：3列×1根=3根', '共6+3=9根', '答：需要9根火柴棒'], explanation: '分横竖分别计算。' },
     { id: 'q8', topicId: 'g1-match', type: 'multiple_choice', difficulty: 'hard', prompt: '摆n个连续正方形需要3n+1根火柴棒，摆5个需要几根？', options: ['14根', '15根', '16根', '17根'], correctIndex: 2, explanation: '3×5+1 = 16根。' },
     { id: 'q9', topicId: 'g1-match', type: 'fill_blank', difficulty: 'hard', prompt: '25根火柴棒摆一排三角形，能摆___个。', correctAnswer: '12', acceptedAnswers: ['十二', '12个'], explanation: '第1个3根，之后每个2根：(25-3)÷2+1 = 12个。' },
     { id: 'q10', topicId: 'g1-match', type: 'true_false', difficulty: 'hard', prompt: '移动2根火柴棒，可以把正方形变成两个三角形。', isTrue: true, explanation: '在正方形中加一条对角线（移动2根），可分成2个三角形，正确。' },
@@ -110,14 +129,60 @@ export const grade1Questions: Record<string, Question[]> = {
     { id: 'q10', topicId: 'g1-calendar', type: 'true_false', difficulty: 'hard', prompt: '如果某年1月1日是星期一，则该年1月31日是星期三。', isTrue: true, explanation: '30天后：30÷7=4余2，星期一+2=星期三，正确。' },
   ],
   'g1-path': [
-    { id: 'q1', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'easy', prompt: '从A到B只能向右或向下走，有几条路线？（2×1格子）', options: ['2条', '3条', '4条', '5条'], correctIndex: 1, explanation: '右下、下右，共3条。' },
+    { id: 'q1', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'easy', prompt: `从A到B只能向右或向下走，有几条路线？
+
+<svg width="130" height="90" viewBox="0 0 130 90" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="50" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="10" width="50" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="6" y="8" font-size="13" fill="#dc2626" font-weight="bold">A</text>
+  <text x="112" y="56" font-size="13" fill="#dc2626" font-weight="bold">B</text>
+</svg>`, options: ['2条', '3条', '4条', '5条'], correctIndex: 1, explanation: '右下、下右，共3条。' },
     { id: 'q2', topicId: 'g1-path', type: 'fill_blank', difficulty: 'easy', prompt: '只能向右走，从左端到右端经过3个点，有___条路线。', correctAnswer: '1', acceptedAnswers: ['一', '1条'], explanation: '只能向右，只有1条路线。' },
     { id: 'q3', topicId: 'g1-path', type: 'true_false', difficulty: 'easy', prompt: '从A到B，只能向右或向上走，路线数与只能向右或向下走相同。', isTrue: true, explanation: '对称性，路线数相同，正确。' },
-    { id: 'q4', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'medium', prompt: '2×2的格子，只能向右或向下，从左上到右下有几条路线？', options: ['4条', '5条', '6条', '7条'], correctIndex: 2, explanation: 'C(4,2) = 6条。' },
+    { id: 'q4', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'medium', prompt: `2×2的格子，只能向右或向下，从左上到右下有几条路线？
+
+<svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="50" height="50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="10" width="50" height="50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="60" width="50" height="50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="60" width="50" height="50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="6" y="8" font-size="13" fill="#dc2626" font-weight="bold">A</text>
+  <text x="112" y="124" font-size="13" fill="#dc2626" font-weight="bold">B</text>
+</svg>`, options: ['4条', '5条', '6条', '7条'], correctIndex: 2, explanation: 'C(4,2) = 6条。' },
     { id: 'q5', topicId: 'g1-path', type: 'fill_blank', difficulty: 'medium', prompt: '1×3的格子，只能向右或向下，从左上到右下有___条路线。', correctAnswer: '4', acceptedAnswers: ['四', '4条'], explanation: 'C(4,1) = 4条。' },
     { id: 'q6', topicId: 'g1-path', type: 'true_false', difficulty: 'medium', prompt: '在1×1的格子中，只能向右或向下，从左上到右下有2条路线。', isTrue: true, explanation: '右下或下右，共2条，正确。' },
-    { id: 'q7', topicId: 'g1-path', type: 'step_solution', difficulty: 'medium', prompt: '3×1的格子，只能向右或向下，从左上到右下有几条路线？', steps: ['标记各节点路线数', '起点=1', '第一行：1,1,1,1', '第一列：1,1', '中间节点=上方+左方', '终点路线数=4', '答：4条路线'], explanation: '用动态规划逐格累加。' },
-    { id: 'q8', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'hard', prompt: '3×2的格子，只能向右或向下，从左上到右下有几条路线？', options: ['8条', '9条', '10条', '12条'], correctIndex: 2, explanation: 'C(5,2) = 10条。' },
+    { id: 'q7', topicId: 'g1-path', type: 'step_solution', difficulty: 'medium', prompt: `3×1的格子，只能向右或向下，从左上到右下有几条路线？
+
+<svg width="180" height="90" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="90" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="130" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="90" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="130" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="6" y="8" font-size="13" fill="#dc2626" font-weight="bold">A</text>
+  <text x="162" y="88" font-size="13" fill="#dc2626" font-weight="bold">B</text>
+</svg>`, steps: ['标记各节点路线数', '起点=1', '第一行：1,1,1,1', '第一列：1,1', '中间节点=上方+左方', '终点路线数=4', '答：4条路线'], explanation: '用动态规划逐格累加。' },
+    { id: 'q8', topicId: 'g1-path', type: 'multiple_choice', difficulty: 'hard', prompt: `3×2的格子，只能向右或向下，从左上到右下有几条路线？
+
+<svg width="180" height="130" viewBox="0 0 180 130" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="90" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="130" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="90" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="130" y="50" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="90" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="90" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="90" y="90" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <rect x="130" y="90" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="6" y="8" font-size="13" fill="#dc2626" font-weight="bold">A</text>
+  <text x="162" y="128" font-size="13" fill="#dc2626" font-weight="bold">B</text>
+</svg>`, options: ['8条', '9条', '10条', '12条'], correctIndex: 2, explanation: 'C(5,2) = 10条。' },
     { id: 'q9', topicId: 'g1-path', type: 'fill_blank', difficulty: 'hard', prompt: '2×3的格子，只能向右或向下，从左上到右下有___条路线。', correctAnswer: '10', acceptedAnswers: ['十', '10条'], explanation: 'C(5,2) = 10条。' },
     { id: 'q10', topicId: 'g1-path', type: 'true_false', difficulty: 'hard', prompt: '在m×n的格子中，只能向右或向下，路线数等于C(m+n, m)。', isTrue: true, explanation: '需要向右m步向下n步，共C(m+n,m)种排列，正确。' },
   ],

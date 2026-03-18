@@ -41,10 +41,28 @@ export const grade5Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g5-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: '正方体有几个面？', options: ['4个', '6个', '8个', '12个'], correctIndex: 1, explanation: '正方体有6个面。' },
     { id: 'q2', topicId: 'g5-geometry', type: 'fill_blank', difficulty: 'easy', prompt: '长方体有___个顶点。', correctAnswer: '8', acceptedAnswers: ['八', '8个'], explanation: '长方体有8个顶点。' },
     { id: 'q3', topicId: 'g5-geometry', type: 'true_false', difficulty: 'easy', prompt: '正方体的12条棱都相等。', isTrue: true, explanation: '正方体的性质，正确。' },
-    { id: 'q4', topicId: 'g5-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: '一个长方体长5厘米，宽4厘米，高3厘米，体积是多少立方厘米？', options: ['48', '54', '60', '72'], correctIndex: 2, explanation: '5×4×3=60立方厘米。' },
+    { id: 'q4', topicId: 'g5-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: `一个长方体长5厘米，宽4厘米，高3厘米，体积是多少立方厘米？
+
+<svg width="160" height="130" viewBox="0 0 160 130" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="30,90 100,90 100,30 30,30" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="100,30 130,10 130,70 100,90" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="30,30 60,10 130,10 100,30" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="55" y="65" font-size="12" fill="#2563eb">5cm</text>
+  <text x="102" y="55" font-size="12" fill="#2563eb">3cm</text>
+  <text x="60" y="20" font-size="12" fill="#2563eb">4cm</text>
+</svg>`, options: ['48', '54', '60', '72'], correctIndex: 2, explanation: '5×4×3=60立方厘米。' },
     { id: 'q5', topicId: 'g5-geometry', type: 'fill_blank', difficulty: 'medium', prompt: '正方体棱长6厘米，表面积是___平方厘米。', correctAnswer: '216', acceptedAnswers: ['二百一十六', '216平方厘米'], explanation: '6×6×6=216平方厘米。' },
     { id: 'q6', topicId: 'g5-geometry', type: 'true_false', difficulty: 'medium', prompt: '长方体体积=长×宽×高。', isTrue: true, explanation: '长方体体积公式，正确。' },
-    { id: 'q7', topicId: 'g5-geometry', type: 'step_solution', difficulty: 'medium', prompt: '一个长方体长8厘米，宽6厘米，高5厘米，求表面积。', steps: ['上下面积：8×6×2=96平方厘米', '前后面积：8×5×2=80平方厘米', '左右面积：6×5×2=60平方厘米', '表面积：96+80+60=236平方厘米'], explanation: '长方体表面积计算。' },
+    { id: 'q7', topicId: 'g5-geometry', type: 'step_solution', difficulty: 'medium', prompt: `一个长方体长8厘米，宽6厘米，高5厘米，求表面积。
+
+<svg width="160" height="130" viewBox="0 0 160 130" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="30,90 110,90 110,30 30,30" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="110,30 140,10 140,70 110,90" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="30,30 60,10 140,10 110,30" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="65" font-size="12" fill="#2563eb">8cm</text>
+  <text x="112" y="55" font-size="12" fill="#2563eb">5cm</text>
+  <text x="70" y="20" font-size="12" fill="#2563eb">6cm</text>
+</svg>`, steps: ['上下面积：8×6×2=96平方厘米', '前后面积：8×5×2=80平方厘米', '左右面积：6×5×2=60平方厘米', '表面积：96+80+60=236平方厘米'], explanation: '长方体表面积计算。' },
     { id: 'q8', topicId: 'g5-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: '一个正方体棱长增加20%，体积增加百分之几？', options: ['20%', '44%', '60%', '72.8%'], correctIndex: 3, explanation: '新棱长1.2a，新体积(1.2a)³=1.728a³，增加72.8%。' },
     { id: 'q9', topicId: 'g5-geometry', type: 'fill_blank', difficulty: 'hard', prompt: '一个长方体长、宽、高的比是3:2:1，体积是48立方厘米，长是___厘米。', correctAnswer: '6', acceptedAnswers: ['六', '6厘米'], explanation: '设长3x，宽2x，高x，3x×2x×x=6x³=48，x³=8，x=2，长=6厘米。' },
     { id: 'q10', topicId: 'g5-geometry', type: 'true_false', difficulty: 'hard', prompt: '正方体表面积=6×棱长²。', isTrue: true, explanation: '正方体表面积公式，正确。' },
@@ -66,10 +84,36 @@ export const grade5Questions: Record<string, Question[]> = {
     { id: 'q2', topicId: 'g5-travel', type: 'fill_blank', difficulty: 'easy', prompt: '甲乙两人同时从同地出发同向而行，甲每小时6千米，乙每小时4千米，___小时后两人相距10千米。', correctAnswer: '5', acceptedAnswers: ['五', '5小时'], explanation: '10÷(6-4)=5小时。' },
     { id: 'q3', topicId: 'g5-travel', type: 'true_false', difficulty: 'easy', prompt: '相遇问题：相遇时间=总路程÷速度和。', isTrue: true, explanation: '相遇问题公式，正确。' },
     { id: 'q4', topicId: 'g5-travel', type: 'multiple_choice', difficulty: 'medium', prompt: '甲乙两车从AB两地同时相向而行，甲车每小时70千米，乙车每小时50千米，4小时后两车还相距60千米，AB两地相距多少千米？', options: ['420千米', '480千米', '540千米', '600千米'], correctIndex: 2, explanation: '(70+50)×4+60=540千米。' },
-    { id: 'q5', topicId: 'g5-travel', type: 'fill_blank', difficulty: 'medium', prompt: '甲乙两人在400米环形跑道上同时同地同向出发，甲每秒5米，乙每秒3米，___秒后甲第一次追上乙。', correctAnswer: '200', acceptedAnswers: ['二百', '200秒'], explanation: '400÷(5-3)=200秒。' },
+    { id: 'q5', topicId: 'g5-travel', type: 'fill_blank', difficulty: 'medium', prompt: `甲乙两人在400米环形跑道上同时同地同向出发，甲每秒5米，乙每秒3米，___秒后甲第一次追上乙。
+
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="55" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="70" cy="70" r="35" fill="white" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="70" cy="15" r="7" fill="#dc2626"/>
+  <text x="62" y="19" font-size="10" fill="white">甲乙</text>
+  <path d="M 118 55 Q 128 70 118 85" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <text x="120" y="73" font-size="10" fill="#2563eb">→</text>
+  <text x="42" y="74" font-size="11" fill="#6b7280">400米</text>
+  <text x="30" y="100" font-size="10" fill="#2563eb">甲:5m/s</text>
+  <text x="80" y="100" font-size="10" fill="#f59e0b">乙:3m/s</text>
+</svg>`, correctAnswer: '200', acceptedAnswers: ['二百', '200秒'], explanation: '400÷(5-3)=200秒。' },
     { id: 'q6', topicId: 'g5-travel', type: 'true_false', difficulty: 'medium', prompt: '追及问题：追及时间=路程差÷速度差。', isTrue: true, explanation: '追及问题公式，正确。' },
     { id: 'q7', topicId: 'g5-travel', type: 'step_solution', difficulty: 'medium', prompt: '甲乙两车从AB两地同时出发相向而行，甲车每小时60千米，乙车每小时40千米，相遇时甲车比乙车多行80千米，AB两地相距多少千米？', steps: ['相遇时，甲乙所用时间相同', '速度差：60-40=20千米/小时', '相遇时间：80÷20=4小时', 'AB距离：(60+40)×4=400千米'], explanation: '利用速度差和路程差求解。' },
-    { id: 'q8', topicId: 'g5-travel', type: 'multiple_choice', difficulty: 'hard', prompt: '甲乙两人在环形跑道上同时同地反向出发，甲每秒5米，乙每秒3米，跑道周长400米，多少秒后第一次相遇？', options: ['40秒', '50秒', '60秒', '80秒'], correctIndex: 1, explanation: '400÷(5+3)=50秒。' },
+    { id: 'q8', topicId: 'g5-travel', type: 'multiple_choice', difficulty: 'hard', prompt: `甲乙两人在环形跑道上同时同地反向出发，甲每秒5米，乙每秒3米，跑道周长400米，多少秒后第一次相遇？
+
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="55" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="70" cy="70" r="35" fill="white" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="70" cy="15" r="7" fill="#dc2626"/>
+  <text x="62" y="19" font-size="10" fill="white">甲乙</text>
+  <path d="M 118 55 Q 128 70 118 85" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <text x="120" y="73" font-size="10" fill="#2563eb">→</text>
+  <path d="M 22 85 Q 12 70 22 55" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <text x="6" y="73" font-size="10" fill="#f59e0b">←</text>
+  <text x="42" y="74" font-size="11" fill="#6b7280">400米</text>
+  <text x="30" y="100" font-size="10" fill="#2563eb">甲:5m/s</text>
+  <text x="80" y="100" font-size="10" fill="#f59e0b">乙:3m/s</text>
+</svg>`, options: ['40秒', '50秒', '60秒', '80秒'], correctIndex: 1, explanation: '400÷(5+3)=50秒。' },
     { id: 'q9', topicId: 'g5-travel', type: 'fill_blank', difficulty: 'hard', prompt: '甲乙两车从AB两地同时相向而行，第一次相遇距A地80千米，相遇后继续前进到达对方出发点后立即返回，第二次相遇距B地60千米，AB两地相距___千米。', correctAnswer: '200', acceptedAnswers: ['二百', '200千米'], explanation: '第一次相遇共行1个全程，甲行80千米。第二次相遇共行3个全程，甲行240千米。甲行全程+60=240，全程=180。重算：设全程S，甲速度v1，乙速度v2。第一次：v1/(v1+v2)=80/S。第二次：甲共行S+S-60=2S-60，2S-60=3×80=240，S=150不对。实际公式：S=(80+60)×2-80=200。' },
     { id: 'q10', topicId: 'g5-logic', type: 'true_false', difficulty: 'hard', prompt: '流水行船问题：顺水速度=船速+水速，逆水速度=船速-水速。', isTrue: true, explanation: '流水行船基本公式，正确。' },
   ],
@@ -101,12 +145,40 @@ export const grade5Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g5-geometry2', type: 'multiple_choice', difficulty: 'easy', prompt: '圆的半径是5厘米，直径是多少厘米？', options: ['8厘米', '10厘米', '12厘米', '15厘米'], correctIndex: 1, explanation: '直径=半径×2=10厘米。' },
     { id: 'q2', topicId: 'g5-geometry2', type: 'fill_blank', difficulty: 'easy', prompt: '圆的周长公式是C=___。', correctAnswer: '2πr', acceptedAnswers: ['πd', '2πr或πd', '2乘π乘r'], explanation: 'C=2πr或C=πd。' },
     { id: 'q3', topicId: 'g5-geometry2', type: 'true_false', difficulty: 'easy', prompt: '圆的面积公式是S=πr²。', isTrue: true, explanation: '圆的面积公式，正确。' },
-    { id: 'q4', topicId: 'g5-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: '圆的半径是4厘米，面积是多少平方厘米？（π取3.14）', options: ['50.24', '50.56', '50.88', '51.2'], correctIndex: 0, explanation: '3.14×4²=3.14×16=50.24平方厘米。' },
+    { id: 'q4', topicId: 'g5-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: `圆的半径是4厘米，面积是多少平方厘米？（π取3.14）
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="60" x2="110" y2="60" stroke="#dc2626" stroke-width="2"/>
+  <text x="72" y="55" font-size="12" fill="#dc2626">r=4cm</text>
+  <circle cx="60" cy="60" r="3" fill="#2563eb"/>
+</svg>`, options: ['50.24', '50.56', '50.88', '51.2'], correctIndex: 0, explanation: '3.14×4²=3.14×16=50.24平方厘米。' },
     { id: 'q5', topicId: 'g5-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: '圆的周长是31.4厘米（π取3.14），半径是___厘米。', correctAnswer: '5', acceptedAnswers: ['五', '5厘米'], explanation: '31.4÷3.14÷2=5厘米。' },
     { id: 'q6', topicId: 'g5-geometry2', type: 'true_false', difficulty: 'medium', prompt: '圆的半径扩大2倍，面积扩大4倍。', isTrue: true, explanation: '面积与半径的平方成正比，正确。' },
-    { id: 'q7', topicId: 'g5-geometry2', type: 'step_solution', difficulty: 'medium', prompt: '一个圆形花坛，直径是10米，周围铺一条宽2米的小路，小路的面积是多少平方米？（π取3.14）', steps: ['大圆半径：5+2=7米', '大圆面积：3.14×7²=153.86平方米', '小圆面积：3.14×5²=78.5平方米', '小路面积：153.86-78.5=75.36平方米'], explanation: '环形面积计算。' },
+    { id: 'q7', topicId: 'g5-geometry2', type: 'step_solution', difficulty: 'medium', prompt: `一个圆形花坛，直径是10米，周围铺一条宽2米的小路，小路的面积是多少平方米？（π取3.14）
+
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="80" cy="80" r="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="80" cy="80" r="50" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <line x1="80" y1="80" x2="130" y2="80" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="95" y="75" font-size="11" fill="#dc2626">5m</text>
+  <line x1="80" y1="80" x2="150" y2="80" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="132" y="75" font-size="11" fill="#22c55e">7m</text>
+  <text x="55" y="84" font-size="11" fill="#6b7280">花坛</text>
+  <text x="100" y="50" font-size="11" fill="#2563eb">小路</text>
+  <text x="100" y="62" font-size="11" fill="#2563eb">2m宽</text>
+</svg>`, steps: ['大圆半径：5+2=7米', '大圆面积：3.14×7²=153.86平方米', '小圆面积：3.14×5²=78.5平方米', '小路面积：153.86-78.5=75.36平方米'], explanation: '环形面积计算。' },
     { id: 'q8', topicId: 'g5-geometry2', type: 'multiple_choice', difficulty: 'hard', prompt: '一个圆的周长和面积的数值相等（不考虑单位），半径是多少？', options: ['1', '2', '3', '4'], correctIndex: 1, explanation: '2πr=πr²，2=r，r=2。' },
-    { id: 'q9', topicId: 'g5-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: '一个半圆的周长是25.7厘米（π取3.14），这个半圆的面积是___平方厘米。', correctAnswer: '38.5', acceptedAnswers: ['三十八点五', '38.5平方厘米'], explanation: '半圆周长=πr+2r=25.7，r(3.14+2)=25.7，r=5，面积=πr²÷2=3.14×25÷2=38.5平方厘米。' },
+    { id: 'q9', topicId: 'g5-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: `一个半圆的周长是25.7厘米（π取3.14），这个半圆的面积是___平方厘米。
+
+<svg width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 20 70 A 50 50 0 0 1 120 70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="20" y1="70" x2="120" y2="70" stroke="#2563eb" stroke-width="2"/>
+  <line x1="70" y1="70" x2="120" y2="70" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="82" y="65" font-size="11" fill="#dc2626">r</text>
+  <circle cx="70" cy="70" r="3" fill="#2563eb"/>
+  <text x="40" y="45" font-size="11" fill="#6b7280">半圆</text>
+</svg>`, correctAnswer: '38.5', acceptedAnswers: ['三十八点五', '38.5平方厘米'], explanation: '半圆周长=πr+2r=25.7，r(3.14+2)=25.7，r=5，面积=πr²÷2=3.14×25÷2=38.5平方厘米。' },
     { id: 'q10', topicId: 'g5-geometry2', type: 'true_false', difficulty: 'hard', prompt: '扇形面积=πr²×圆心角/360°。', isTrue: true, explanation: '扇形面积公式，正确。' },
   ],
   'g5-sequences': [
@@ -123,12 +195,72 @@ export const grade5Questions: Record<string, Question[]> = {
   ],
   'g5-counting': [
     { id: 'q1', topicId: 'g5-counting', type: 'multiple_choice', difficulty: 'easy', prompt: '从A到B有3条路，从B到C有4条路，从A经B到C有多少条不同的路线？', options: ['7条', '10条', '12条', '15条'], correctIndex: 2, explanation: '3×4=12条。' },
-    { id: 'q2', topicId: 'g5-counting', type: 'fill_blank', difficulty: 'easy', prompt: '从A到B只能向右或向上走，A在左下角，B在右上角，中间是2×2的方格，有___条不同的路线。', correctAnswer: '6', acceptedAnswers: ['六', '6条'], explanation: 'C(4,2)=6条（需要向右2步，向上2步）。' },
+    { id: 'q2', topicId: 'g5-counting', type: 'fill_blank', difficulty: 'easy', prompt: `从A到B只能向右或向上走，A在左下角，B在右上角，中间是2×2的方格，有___条不同的路线。
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="100" x2="100" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="60" x2="100" y2="60" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="100" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="20" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="60" y1="20" x2="60" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="100" y1="20" x2="100" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="20" cy="100" r="5" fill="#dc2626"/>
+  <text x="4" y="114" font-size="12" fill="#dc2626">A</text>
+  <circle cx="100" cy="20" r="5" fill="#22c55e"/>
+  <text x="104" y="18" font-size="12" fill="#22c55e">B</text>
+</svg>`, correctAnswer: '6', acceptedAnswers: ['六', '6条'], explanation: 'C(4,2)=6条（需要向右2步，向上2步）。' },
     { id: 'q3', topicId: 'g5-counting', type: 'true_false', difficulty: 'easy', prompt: '路径计数问题常用组合数学方法。', isTrue: true, explanation: '路径计数的基本方法，正确。' },
-    { id: 'q4', topicId: 'g5-counting', type: 'multiple_choice', difficulty: 'medium', prompt: '从(0,0)到(3,3)只能向右或向上走，有多少条不同的路线？', options: ['15条', '18条', '20条', '24条'], correctIndex: 2, explanation: 'C(6,3)=20条（需要向右3步，向上3步，共6步）。' },
-    { id: 'q5', topicId: 'g5-counting', type: 'fill_blank', difficulty: 'medium', prompt: '从(0,0)到(4,2)只能向右或向上走，有___条不同的路线。', correctAnswer: '15', acceptedAnswers: ['十五', '15条'], explanation: 'C(6,2)=15条（需要向右4步，向上2步，共6步）。' },
+    { id: 'q4', topicId: 'g5-counting', type: 'multiple_choice', difficulty: 'medium', prompt: `从(0,0)到(3,3)只能向右或向上走，有多少条不同的路线？
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="100" x2="100" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="73" x2="100" y2="73" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="47" x2="100" y2="47" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="100" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="20" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="47" y1="20" x2="47" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="73" y1="20" x2="73" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="100" y1="20" x2="100" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="20" cy="100" r="5" fill="#dc2626"/>
+  <text x="4" y="114" font-size="11" fill="#dc2626">(0,0)</text>
+  <circle cx="100" cy="20" r="5" fill="#22c55e"/>
+  <text x="88" y="16" font-size="11" fill="#22c55e">(3,3)</text>
+</svg>`, options: ['15条', '18条', '20条', '24条'], correctIndex: 2, explanation: 'C(6,3)=20条（需要向右3步，向上3步，共6步）。' },
+    { id: 'q5', topicId: 'g5-counting', type: 'fill_blank', difficulty: 'medium', prompt: `从(0,0)到(4,2)只能向右或向上走，有___条不同的路线。
+
+<svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="80" x2="120" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="50" x2="120" y2="50" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="120" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="20" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="45" y1="20" x2="45" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="70" y1="20" x2="70" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="95" y1="20" x2="95" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="120" y1="20" x2="120" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="20" cy="80" r="5" fill="#dc2626"/>
+  <text x="4" y="94" font-size="11" fill="#dc2626">(0,0)</text>
+  <circle cx="120" cy="20" r="5" fill="#22c55e"/>
+  <text x="108" y="16" font-size="11" fill="#22c55e">(4,2)</text>
+</svg>`, correctAnswer: '15', acceptedAnswers: ['十五', '15条'], explanation: 'C(6,2)=15条（需要向右4步，向上2步，共6步）。' },
     { id: 'q6', topicId: 'g5-counting', type: 'true_false', difficulty: 'medium', prompt: '从(0,0)到(m,n)只能向右或向上走，路线数为C(m+n,m)。', isTrue: true, explanation: '路径计数公式，正确。' },
-    { id: 'q7', topicId: 'g5-counting', type: 'step_solution', difficulty: 'medium', prompt: '从(0,0)到(3,2)只能向右或向上走，但不能经过(1,1)，有多少条路线？', steps: ['总路线数：C(5,2)=10条', '经过(1,1)的路线：C(2,1)×C(3,1)=2×3=6条', '不经过(1,1)的路线：10-6=4条'], explanation: '容斥原理计算路径。' },
+    { id: 'q7', topicId: 'g5-counting', type: 'step_solution', difficulty: 'medium', prompt: `从(0,0)到(3,2)只能向右或向上走，但不能经过(1,1)，有多少条路线？
+
+<svg width="120" height="100" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="80" x2="100" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="50" x2="100" y2="50" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="100" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="20" y1="20" x2="20" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="47" y1="20" x2="47" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="73" y1="20" x2="73" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="100" y1="20" x2="100" y2="80" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="20" cy="80" r="5" fill="#dc2626"/>
+  <text x="4" y="94" font-size="10" fill="#dc2626">(0,0)</text>
+  <circle cx="100" cy="20" r="5" fill="#22c55e"/>
+  <text x="88" y="16" font-size="10" fill="#22c55e">(3,2)</text>
+  <rect x="40" y="43" width="14" height="14" fill="#fecaca" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="43" y="54" font-size="10" fill="#dc2626">✕</text>
+  <text x="30" y="40" font-size="10" fill="#dc2626">(1,1)</text>
+</svg>`, steps: ['总路线数：C(5,2)=10条', '经过(1,1)的路线：C(2,1)×C(3,1)=2×3=6条', '不经过(1,1)的路线：10-6=4条'], explanation: '容斥原理计算路径。' },
     { id: 'q8', topicId: 'g5-counting', type: 'multiple_choice', difficulty: 'hard', prompt: '从(0,0)到(4,4)只能向右或向上走，且不能经过对角线y=x上除起点和终点外的点，有多少条路线？', options: ['12条', '14条', '16条', '18条'], correctIndex: 1, explanation: '卡特兰数：C(8,4)÷5=70÷5=14条。' },
     { id: 'q9', topicId: 'g5-counting', type: 'fill_blank', difficulty: 'hard', prompt: '从(0,0)到(5,5)只能向右或向上走，且路径不能越过对角线y=x，有___条路线。', correctAnswer: '42', acceptedAnswers: ['四十二', '42条'], explanation: '卡特兰数：C(10,5)÷6=252÷6=42条。' },
     { id: 'q10', topicId: 'g5-counting', type: 'true_false', difficulty: 'hard', prompt: '卡特兰数Cn=C(2n,n)/(n+1)。', isTrue: true, explanation: '卡特兰数公式，正确。' },

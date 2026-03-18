@@ -5,11 +5,39 @@ export const grade4Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g4-travel', type: 'multiple_choice', difficulty: 'easy', prompt: '甲车每小时60千米，行驶3小时，行驶了多少千米？', options: ['150千米', '180千米', '200千米', '210千米'], correctIndex: 1, explanation: '60×3=180千米。' },
     { id: 'q2', topicId: 'g4-travel', type: 'fill_blank', difficulty: 'easy', prompt: '两地相距240千米，汽车每小时行80千米，需要___小时。', correctAnswer: '3', acceptedAnswers: ['三', '3小时'], explanation: '240÷80=3小时。' },
     { id: 'q3', topicId: 'g4-travel', type: 'true_false', difficulty: 'easy', prompt: '速度=路程÷时间。', isTrue: true, explanation: '行程问题基本公式，正确。' },
-    { id: 'q4', topicId: 'g4-travel', type: 'multiple_choice', difficulty: 'medium', prompt: '甲乙两车同时从两地相向而行，甲车每小时70千米，乙车每小时50千米，4小时相遇，两地相距多少千米？', options: ['400千米', '420千米', '480千米', '500千米'], correctIndex: 2, explanation: '(70+50)×4=480千米。' },
+    { id: 'q4', topicId: 'g4-travel', type: 'multiple_choice', difficulty: 'medium', prompt: `甲乙两车同时从两地相向而行，甲车每小时70千米，乙车每小时50千米，4小时相遇，两地相距多少千米？
+
+<svg width="240" height="70" viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="40" x2="220" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="28" width="30" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+  <text x="14" y="41" font-size="11" fill="#2563eb">甲</text>
+  <rect x="200" y="28" width="30" height="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" rx="3"/>
+  <text x="204" y="41" font-size="11" fill="#f59e0b">乙</text>
+  <path d="M 42 37 L 60 37 L 56 33 M 60 37 L 56 41" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 198 37 L 180 37 L 184 33 M 180 37 L 184 41" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <text x="75" y="35" font-size="11" fill="#dc2626">←——?千米——→</text>
+  <text x="42" y="62" font-size="11" fill="#2563eb">70千米/时</text>
+  <text x="160" y="62" font-size="11" fill="#f59e0b">50千米/时</text>
+</svg>`, options: ['400千米', '420千米', '480千米', '500千米'], correctIndex: 2, explanation: '(70+50)×4=480千米。' },
     { id: 'q5', topicId: 'g4-travel', type: 'fill_blank', difficulty: 'medium', prompt: '甲乙两人同时从同地出发同向而行，甲每小时5千米，乙每小时3千米，___小时后两人相距10千米。', correctAnswer: '5', acceptedAnswers: ['五', '5小时'], explanation: '10÷(5-3)=5小时。' },
     { id: 'q6', topicId: 'g4-travel', type: 'true_false', difficulty: 'medium', prompt: '追及问题：追及时间=路程差÷速度差。', isTrue: true, explanation: '追及问题公式，正确。' },
     { id: 'q7', topicId: 'g4-travel', type: 'step_solution', difficulty: 'medium', prompt: '甲乙两车从AB两地同时相向而行，甲车每小时60千米，乙车每小时40千米，3小时后两车还相距50千米，AB两地相距多少千米？', steps: ['3小时两车共行：(60+40)×3=300千米', 'AB距离：300+50=350千米', '答：AB两地相距350千米'], explanation: '相遇前的距离计算。' },
-    { id: 'q8', topicId: 'g4-travel', type: 'multiple_choice', difficulty: 'hard', prompt: '甲乙两人在环形跑道上同时同地同向出发，甲每秒5米，乙每秒3米，跑道周长400米，多少秒后甲第一次追上乙？', options: ['100秒', '150秒', '200秒', '250秒'], correctIndex: 2, explanation: '400÷(5-3)=200秒。' },
+    { id: 'q8', topicId: 'g4-travel', type: 'multiple_choice', difficulty: 'hard', prompt: `甲乙两人在环形跑道上同时同地同向出发，甲每秒5米，乙每秒3米，跑道周长400米，多少秒后甲第一次追上乙？
+
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="55" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="70" cy="70" r="35" fill="white" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="70" cy="15" r="7" fill="#dc2626"/>
+  <text x="62" y="19" font-size="10" fill="white">甲乙</text>
+  <path d="M 115 55 Q 125 70 115 85" stroke="#2563eb" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <text x="118" y="73" font-size="10" fill="#2563eb">→</text>
+  <text x="42" y="74" font-size="11" fill="#6b7280">400米</text>
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>`, options: ['100秒', '150秒', '200秒', '250秒'], correctIndex: 2, explanation: '400÷(5-3)=200秒。' },
     { id: 'q9', topicId: 'g4-travel', type: 'fill_blank', difficulty: 'hard', prompt: '甲乙两车同时从AB两地相向而行，第一次相遇距A地80千米，相遇后继续前进，到达对方出发点后立即返回，第二次相遇距B地60千米，AB两地相距___千米。', correctAnswer: '200', acceptedAnswers: ['二百', '200千米'], explanation: '第一次相遇共行1个全程，甲行80千米。第二次相遇共行3个全程，甲行80×3=240千米。240=全程+60，全程=180千米。重算：甲行80到第一次相遇，说明甲速度占比为80/全程。第二次相遇时甲共行全程+60，即全程+60=3×80=240，全程=180。但题目说距B地60，应该是甲行全程+全程-60=2全程-60=240，全程=150。题目复杂，答案约200。' },
     { id: 'q10', topicId: 'g4-travel', type: 'true_false', difficulty: 'hard', prompt: '两车相向而行，相遇时两车所行路程之和等于总路程。', isTrue: true, explanation: '相遇问题基本性质，正确。' },
   ],
@@ -39,13 +67,60 @@ export const grade4Questions: Record<string, Question[]> = {
   ],
   'g4-geometry': [
     { id: 'q1', topicId: 'g4-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: '长方形长8厘米，宽5厘米，面积是多少平方厘米？', options: ['26', '40', '42', '45'], correctIndex: 1, explanation: '8×5=40平方厘米。' },
-    { id: 'q2', topicId: 'g4-geometry', type: 'fill_blank', difficulty: 'easy', prompt: '三角形底6厘米，高4厘米，面积是___平方厘米。', correctAnswer: '12', acceptedAnswers: ['十二', '12平方厘米'], explanation: '6×4÷2=12平方厘米。' },
+    { id: 'q2', topicId: 'g4-geometry', type: 'fill_blank', difficulty: 'easy', prompt: `三角形底6厘米，高4厘米，面积是___平方厘米。
+
+<svg width="140" height="120" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="70,20 20,100 120,100" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="70" y1="20" x2="70" y2="100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="72" y="65" font-size="12" fill="#dc2626">高4cm</text>
+  <line x1="20" y1="100" x2="120" y2="100" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="114" font-size="12" fill="#2563eb">底6cm</text>
+</svg>`, correctAnswer: '12', acceptedAnswers: ['十二', '12平方厘米'], explanation: '6×4÷2=12平方厘米。' },
     { id: 'q3', topicId: 'g4-geometry', type: 'true_false', difficulty: 'easy', prompt: '三角形面积=底×高÷2。', isTrue: true, explanation: '三角形面积公式，正确。' },
-    { id: 'q4', topicId: 'g4-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: '梯形上底4厘米，下底6厘米，高5厘米，面积是多少平方厘米？', options: ['20', '25', '30', '35'], correctIndex: 1, explanation: '(4+6)×5÷2=25平方厘米。' },
-    { id: 'q5', topicId: 'g4-geometry', type: 'fill_blank', difficulty: 'medium', prompt: '平行四边形底8厘米，高6厘米，面积是___平方厘米。', correctAnswer: '48', acceptedAnswers: ['四十八', '48平方厘米'], explanation: '8×6=48平方厘米。' },
+    { id: 'q4', topicId: 'g4-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: `梯形上底4厘米，下底6厘米，高5厘米，面积是多少平方厘米？
+
+<svg width="140" height="120" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="50,20 90,20 110,100 30,100" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="50" y1="20" x2="90" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="16" font-size="11" fill="#2563eb">4cm</text>
+  <line x1="30" y1="100" x2="110" y2="100" stroke="#2563eb" stroke-width="2"/>
+  <text x="62" y="114" font-size="11" fill="#2563eb">6cm</text>
+  <line x1="90" y1="20" x2="90" y2="100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="92" y="65" font-size="11" fill="#dc2626">5cm</text>
+</svg>`, options: ['20', '25', '30', '35'], correctIndex: 1, explanation: '(4+6)×5÷2=25平方厘米。' },
+    { id: 'q5', topicId: 'g4-geometry', type: 'fill_blank', difficulty: 'medium', prompt: `平行四边形底8厘米，高6厘米，面积是___平方厘米。
+
+<svg width="160" height="110" viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="30,20 130,20 150,90 50,90" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="130" y1="20" x2="130" y2="90" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="132" y="60" font-size="11" fill="#dc2626">高6cm</text>
+  <text x="75" y="104" font-size="11" fill="#2563eb">底8cm</text>
+</svg>`, correctAnswer: '48', acceptedAnswers: ['四十八', '48平方厘米'], explanation: '8×6=48平方厘米。' },
     { id: 'q6', topicId: 'g4-geometry', type: 'true_false', difficulty: 'medium', prompt: '平行四边形面积=底×高。', isTrue: true, explanation: '平行四边形面积公式，正确。' },
-    { id: 'q7', topicId: 'g4-geometry', type: 'step_solution', difficulty: 'medium', prompt: '一个梯形面积是30平方厘米，高是5厘米，上底是4厘米，下底是多少厘米？', steps: ['梯形面积=(上底+下底)×高÷2', '30=(4+下底)×5÷2', '60=20+5×下底，5×下底=40', '下底=8厘米'], explanation: '逆向求底边。' },
-    { id: 'q8', topicId: 'g4-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: '一个三角形和一个平行四边形等底等高，三角形面积是20平方厘米，平行四边形面积是多少？', options: ['10平方厘米', '20平方厘米', '30平方厘米', '40平方厘米'], correctIndex: 3, explanation: '平行四边形面积是三角形的2倍，20×2=40平方厘米。' },
+    { id: 'q7', topicId: 'g4-geometry', type: 'step_solution', difficulty: 'medium', prompt: `一个梯形面积是30平方厘米，高是5厘米，上底是4厘米，下底是多少厘米？
+
+<svg width="140" height="110" viewBox="0 0 140 110" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="50,20 90,20 110,90 30,90" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="16" font-size="11" fill="#2563eb">4cm</text>
+  <text x="55" y="104" font-size="11" fill="#2563eb">?cm</text>
+  <line x1="90" y1="20" x2="90" y2="90" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="92" y="60" font-size="11" fill="#dc2626">5cm</text>
+  <text x="30" y="60" font-size="11" fill="#22c55e">S=30</text>
+</svg>`, steps: ['梯形面积=(上底+下底)×高÷2', '30=(4+下底)×5÷2', '60=20+5×下底，5×下底=40', '下底=8厘米'], explanation: '逆向求底边。' },
+    { id: 'q8', topicId: 'g4-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: `一个三角形和一个平行四边形等底等高，三角形面积是20平方厘米，平行四边形面积是多少？
+
+<svg width="240" height="110" viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="30,20 80,90 130,90" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="30" y1="20" x2="30" y2="90" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="32" y="60" font-size="11" fill="#dc2626">h</text>
+  <text x="65" y="104" font-size="11" fill="#2563eb">底</text>
+  <text x="55" y="55" font-size="11" fill="#22c55e">20cm²</text>
+  <polygon points="150,20 200,20 240,90 190,90" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="200" y1="20" x2="200" y2="90" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="202" y="60" font-size="11" fill="#dc2626">h</text>
+  <text x="185" y="104" font-size="11" fill="#f59e0b">底</text>
+  <text x="170" y="60" font-size="11" fill="#22c55e">?cm²</text>
+</svg>`, options: ['10平方厘米', '20平方厘米', '30平方厘米', '40平方厘米'], correctIndex: 3, explanation: '平行四边形面积是三角形的2倍，20×2=40平方厘米。' },
     { id: 'q9', topicId: 'g4-geometry', type: 'fill_blank', difficulty: 'hard', prompt: '一个梯形上底与下底的和是12厘米，高是5厘米，面积是___平方厘米。', correctAnswer: '30', acceptedAnswers: ['三十', '30平方厘米'], explanation: '12×5÷2=30平方厘米。' },
     { id: 'q10', topicId: 'g4-geometry', type: 'true_false', difficulty: 'hard', prompt: '两个完全相同的梯形可以拼成一个平行四边形。', isTrue: true, explanation: '梯形面积公式的推导方法，正确。' },
   ],
@@ -125,10 +200,25 @@ export const grade4Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g4-geometry2', type: 'multiple_choice', difficulty: 'easy', prompt: '三角形三个内角的和是多少度？', options: ['90度', '180度', '270度', '360度'], correctIndex: 1, explanation: '三角形内角和定理。' },
     { id: 'q2', topicId: 'g4-geometry2', type: 'fill_blank', difficulty: 'easy', prompt: '四边形四个内角的和是___度。', correctAnswer: '360', acceptedAnswers: ['三百六十'], explanation: '四边形内角和=360度。' },
     { id: 'q3', topicId: 'g4-geometry2', type: 'true_false', difficulty: 'easy', prompt: '等腰三角形两个底角相等。', isTrue: true, explanation: '等腰三角形的性质，正确。' },
-    { id: 'q4', topicId: 'g4-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: '一个等腰三角形，顶角是40度，底角是多少度？', options: ['60度', '70度', '80度', '90度'], correctIndex: 1, explanation: '(180-40)÷2=70度。' },
+    { id: 'q4', topicId: 'g4-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: `一个等腰三角形，顶角是40度，底角是多少度？
+
+<svg width="140" height="130" viewBox="0 0 140 130" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="70,15 20,115 120,115" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="32" font-size="12" fill="#dc2626">40°</text>
+  <text x="22" y="112" font-size="12" fill="#22c55e">?°</text>
+  <text x="100" y="112" font-size="12" fill="#22c55e">?°</text>
+  <line x1="70" y1="15" x2="70" y2="115" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>`, options: ['60度', '70度', '80度', '90度'], correctIndex: 1, explanation: '(180-40)÷2=70度。' },
     { id: 'q5', topicId: 'g4-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: '平行四边形对角相等，邻角___。', correctAnswer: '互补', acceptedAnswers: ['和为180度', '和是180度'], explanation: '平行四边形邻角互补。' },
     { id: 'q6', topicId: 'g4-geometry2', type: 'true_false', difficulty: 'medium', prompt: '正方形的对角线相等且互相垂直平分。', isTrue: true, explanation: '正方形的性质，正确。' },
-    { id: 'q7', topicId: 'g4-geometry2', type: 'step_solution', difficulty: 'medium', prompt: '一个三角形，三个内角的比是2:3:4，求最大角的度数。', steps: ['设三个角为2x、3x、4x', '2x+3x+4x=180', '9x=180，x=20', '最大角：4x=80度'], explanation: '用比例解三角形问题。' },
+    { id: 'q7', topicId: 'g4-geometry2', type: 'step_solution', difficulty: 'medium', prompt: `一个三角形，三个内角的比是2:3:4，求最大角的度数。
+
+<svg width="140" height="130" viewBox="0 0 140 130" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="70,15 15,115 125,115" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="32" font-size="12" fill="#dc2626">4x</text>
+  <text x="18" y="112" font-size="12" fill="#22c55e">2x</text>
+  <text x="104" y="112" font-size="12" fill="#f59e0b">3x</text>
+</svg>`, steps: ['设三个角为2x、3x、4x', '2x+3x+4x=180', '9x=180，x=20', '最大角：4x=80度'], explanation: '用比例解三角形问题。' },
     { id: 'q8', topicId: 'g4-geometry2', type: 'multiple_choice', difficulty: 'hard', prompt: '一个多边形的内角和是1080度，这是几边形？', options: ['六边形', '七边形', '八边形', '九边形'], correctIndex: 2, explanation: '(n-2)×180=1080，n-2=6，n=8，八边形。' },
     { id: 'q9', topicId: 'g4-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: '正五边形的每个内角是___度。', correctAnswer: '108', acceptedAnswers: ['一百零八'], explanation: '(5-2)×180÷5=108度。' },
     { id: 'q10', topicId: 'g4-geometry2', type: 'true_false', difficulty: 'hard', prompt: 'n边形的内角和公式是(n-2)×180度。', isTrue: true, explanation: '多边形内角和公式，正确。' },

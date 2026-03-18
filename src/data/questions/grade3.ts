@@ -66,10 +66,36 @@ export const grade3Questions: Record<string, Question[]> = {
     { id: 'q2', topicId: 'g3-travel', type: 'fill_blank', difficulty: 'easy', prompt: '汽车每小时行60千米，行了120千米，用了___小时。', correctAnswer: '2', acceptedAnswers: ['两', '2小时'], explanation: '120÷60=2小时。' },
     { id: 'q3', topicId: 'g3-travel', type: 'true_false', difficulty: 'easy', prompt: '路程=速度×时间。', isTrue: true, explanation: '行程问题基本公式，正确。' },
     { id: 'q4', topicId: 'g3-travel', type: 'multiple_choice', difficulty: 'medium', prompt: '甲乙两地相距180千米，汽车每小时行60千米，几小时到达？', options: ['2小时', '3小时', '4小时', '5小时'], correctIndex: 1, explanation: '180÷60=3小时。' },
-    { id: 'q5', topicId: 'g3-travel', type: 'fill_blank', difficulty: 'medium', prompt: '两车相向而行，甲车每小时60千米，乙车每小时40千米，相距200千米，___小时相遇。', correctAnswer: '2', acceptedAnswers: ['两', '2小时'], explanation: '200÷(60+40)=2小时。' },
+    { id: 'q5', topicId: 'g3-travel', type: 'fill_blank', difficulty: 'medium', prompt: `两车相向而行，甲车每小时60千米，乙车每小时40千米，相距200千米，___小时相遇。
+
+<svg width="240" height="70" viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="40" x2="220" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="28" width="30" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+  <text x="14" y="41" font-size="11" fill="#2563eb">甲</text>
+  <rect x="200" y="28" width="30" height="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" rx="3"/>
+  <text x="204" y="41" font-size="11" fill="#f59e0b">乙</text>
+  <path d="M 42 37 L 60 37 L 56 33 M 60 37 L 56 41" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 198 37 L 180 37 L 184 33 M 180 37 L 184 41" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <text x="85" y="35" font-size="11" fill="#dc2626">←——200千米——→</text>
+  <text x="42" y="62" font-size="11" fill="#2563eb">60千米/时</text>
+  <text x="160" y="62" font-size="11" fill="#f59e0b">40千米/时</text>
+</svg>`, correctAnswer: '2', acceptedAnswers: ['两', '2小时'], explanation: '200÷(60+40)=2小时。' },
     { id: 'q6', topicId: 'g3-travel', type: 'true_false', difficulty: 'medium', prompt: '相向而行，相遇时间=总路程÷速度和。', isTrue: true, explanation: '相遇问题公式，正确。' },
     { id: 'q7', topicId: 'g3-travel', type: 'step_solution', difficulty: 'medium', prompt: '甲乙两地相距300千米，甲车每小时50千米，乙车每小时70千米，同时相向出发，几小时相遇？', steps: ['速度和：50+70=120千米/小时', '相遇时间：300÷120=2.5小时', '答：2.5小时相遇'], explanation: '相向而行用速度和。' },
-    { id: 'q8', topicId: 'g3-travel', type: 'multiple_choice', difficulty: 'hard', prompt: '甲乙同向而行，甲在前，甲速度40千米/小时，乙速度60千米/小时，相距80千米，乙几小时追上甲？', options: ['2小时', '3小时', '4小时', '5小时'], correctIndex: 2, explanation: '80÷(60-40)=4小时。' },
+    { id: 'q8', topicId: 'g3-travel', type: 'multiple_choice', difficulty: 'hard', prompt: `甲乙同向而行，甲在前，甲速度40千米/小时，乙速度60千米/小时，相距80千米，乙几小时追上甲？
+
+<svg width="240" height="70" viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="40" x2="220" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="28" width="30" height="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" rx="3"/>
+  <text x="14" y="41" font-size="11" fill="#f59e0b">乙</text>
+  <rect x="120" y="28" width="30" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+  <text x="124" y="41" font-size="11" fill="#2563eb">甲</text>
+  <path d="M 42 37 L 60 37 L 56 33 M 60 37 L 56 41" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <path d="M 152 37 L 170 37 L 166 33 M 170 37 L 166 41" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <text x="65" y="35" font-size="11" fill="#dc2626">←—80千米—→</text>
+  <text x="10" y="62" font-size="11" fill="#f59e0b">60千米/时</text>
+  <text x="120" y="62" font-size="11" fill="#2563eb">40千米/时</text>
+</svg>`, options: ['2小时', '3小时', '4小时', '5小时'], correctIndex: 2, explanation: '80÷(60-40)=4小时。' },
     { id: 'q9', topicId: 'g3-travel', type: 'fill_blank', difficulty: 'hard', prompt: '环形跑道周长400米，甲每秒5米，乙每秒3米，同向同时出发，___秒后甲第一次追上乙。', correctAnswer: '200', acceptedAnswers: ['二百', '200秒'], explanation: '400÷(5-3)=200秒。' },
     { id: 'q10', topicId: 'g3-travel', type: 'true_false', difficulty: 'hard', prompt: '追及问题：追及时间=路程差÷速度差。', isTrue: true, explanation: '追及问题公式，正确。' },
   ],
@@ -122,13 +148,50 @@ export const grade3Questions: Record<string, Question[]> = {
     { id: 'q10', topicId: 'g3-digit', type: 'true_false', difficulty: 'hard', prompt: '一个数的末两位数能被4整除，这个数就能被4整除。', isTrue: true, explanation: '能被4整除的判定方法，正确。' },
   ],
   'g3-geometry2': [
-    { id: 'q1', topicId: 'g3-geometry2', type: 'multiple_choice', difficulty: 'easy', prompt: '图中有几个三角形？（一个大三角形被一条线分成两个小三角形）', options: ['2个', '3个', '4个', '5个'], correctIndex: 1, explanation: '2个小三角形+1个大三角形=3个。' },
-    { id: 'q2', topicId: 'g3-geometry2', type: 'fill_blank', difficulty: 'easy', prompt: '一个正方形被两条对角线分成___个三角形。', correctAnswer: '4', acceptedAnswers: ['四', '4个'], explanation: '两条对角线分成4个三角形。' },
+    { id: 'q1', topicId: 'g3-geometry2', type: 'multiple_choice', difficulty: 'easy', prompt: `图中有几个三角形？（一个大三角形被一条线分成两个小三角形）
+
+<svg width="200" height="173" viewBox="0 0 200 173" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="100,20 20,160 180,160" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="100" y1="20" x2="100" y2="160" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="120" font-size="13" fill="#dc2626">△1</text>
+  <text x="130" y="120" font-size="13" fill="#dc2626">△2</text>
+  <text x="88" y="50" font-size="13" fill="#22c55e">大△</text>
+</svg>`, options: ['2个', '3个', '4个', '5个'], correctIndex: 1, explanation: '2个小三角形+1个大三角形=3个。' },
+    { id: 'q2', topicId: 'g3-geometry2', type: 'fill_blank', difficulty: 'easy', prompt: `一个正方形被两条对角线分成___个三角形。
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="80" height="80" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="20" y1="20" x2="100" y2="100" stroke="#dc2626" stroke-width="2"/>
+  <line x1="100" y1="20" x2="20" y2="100" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="38" font-size="12" fill="#6b7280">①</text>
+  <text x="82" y="65" font-size="12" fill="#6b7280">②</text>
+  <text x="52" y="92" font-size="12" fill="#6b7280">③</text>
+  <text x="22" y="65" font-size="12" fill="#6b7280">④</text>
+</svg>`, correctAnswer: '4', acceptedAnswers: ['四', '4个'], explanation: '两条对角线分成4个三角形。' },
     { id: 'q3', topicId: 'g3-geometry2', type: 'true_false', difficulty: 'easy', prompt: '图形计数要按照从小到大的顺序，避免遗漏。', isTrue: true, explanation: '系统计数方法，正确。' },
     { id: 'q4', topicId: 'g3-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: '5个点排成一排，连接任意两点，最多可以画几条线段？', options: ['8条', '10条', '12条', '15条'], correctIndex: 1, explanation: 'C(5,2)=5×4÷2=10条。' },
-    { id: 'q5', topicId: 'g3-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: '一个长方形被3条竖线分成4个小长方形，图中共有___个长方形。', correctAnswer: '10', acceptedAnswers: ['十', '10个'], explanation: '1个的4个，2个的3个，3个的2个，4个的1个，共4+3+2+1=10个。' },
+    { id: 'q5', topicId: 'g3-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: `一个长方形被3条竖线分成4个小长方形，图中共有___个长方形。
+
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="20" width="200" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="20" x2="60" y2="70" stroke="#2563eb" stroke-width="2"/>
+  <line x1="110" y1="20" x2="110" y2="70" stroke="#2563eb" stroke-width="2"/>
+  <line x1="160" y1="20" x2="160" y2="70" stroke="#2563eb" stroke-width="2"/>
+  <text x="28" y="50" font-size="13" fill="#dc2626">①</text>
+  <text x="78" y="50" font-size="13" fill="#dc2626">②</text>
+  <text x="128" y="50" font-size="13" fill="#dc2626">③</text>
+  <text x="178" y="50" font-size="13" fill="#dc2626">④</text>
+</svg>`, correctAnswer: '10', acceptedAnswers: ['十', '10个'], explanation: '1个的4个，2个的3个，3个的2个，4个的1个，共4+3+2+1=10个。' },
     { id: 'q6', topicId: 'g3-geometry2', type: 'true_false', difficulty: 'medium', prompt: 'n个点排成一排，可以画n(n-1)/2条线段。', isTrue: true, explanation: '组合数公式，正确。' },
-    { id: 'q7', topicId: 'g3-geometry2', type: 'step_solution', difficulty: 'medium', prompt: '数一数图中有多少个正方形？（一个3×3的方格）', steps: ['1×1的正方形：9个', '2×2的正方形：4个', '3×3的正方形：1个', '总共：9+4+1=14个'], explanation: '分类计数。' },
+    { id: 'q7', topicId: 'g3-geometry2', type: 'step_solution', difficulty: 'medium', prompt: `数一数图中有多少个正方形？（一个3×3的方格）
+
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="120" height="120" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="50" y1="10" x2="50" y2="130" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="90" y1="10" x2="90" y2="130" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="10" y1="50" x2="130" y2="50" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="10" y1="90" x2="130" y2="90" stroke="#2563eb" stroke-width="1.5"/>
+</svg>`, steps: ['1×1的正方形：9个', '2×2的正方形：4个', '3×3的正方形：1个', '总共：9+4+1=14个'], explanation: '分类计数。' },
     { id: 'q8', topicId: 'g3-geometry2', type: 'multiple_choice', difficulty: 'hard', prompt: '一个三角形内有3个点，连接所有点和顶点，最多可以将三角形分成几个小三角形？', options: ['7个', '8个', '9个', '10个'], correctIndex: 0, explanation: '每增加一个内部点，增加2个三角形，3个点增加6个，原来1个，共7个。' },
     { id: 'q9', topicId: 'g3-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: '一个圆上有6个点，连接任意两点，最多可以画___条线段。', correctAnswer: '15', acceptedAnswers: ['十五', '15条'], explanation: 'C(6,2)=6×5÷2=15条。' },
     { id: 'q10', topicId: 'g3-geometry2', type: 'true_false', difficulty: 'hard', prompt: '一个n×n的方格中，正方形的总数是1²+2²+3²+...+n²。', isTrue: true, explanation: '正方形计数公式，正确。' },
@@ -137,7 +200,13 @@ export const grade3Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g3-match', type: 'multiple_choice', difficulty: 'easy', prompt: '用12根火柴摆成"III=III"（3=3），移动1根使等式成立，怎么移？', options: ['移成II=IV', '移成IV=II', '移成III=II', '无法移动'], correctIndex: 0, explanation: '移动一根I到右边变成IV，II=IV不对。实际：III=III已经成立。题目有误。' },
     { id: 'q2', topicId: 'g3-match', type: 'fill_blank', difficulty: 'easy', prompt: '火柴棒等式"VI-IV=II"，移动___根火柴可以使等式成立。', correctAnswer: '0', acceptedAnswers: ['零', '不用移动'], explanation: '6-4=2，等式已经成立。' },
     { id: 'q3', topicId: 'g3-match', type: 'true_false', difficulty: 'easy', prompt: '火柴棒问题通常要求移动最少的火柴棒使等式成立。', isTrue: true, explanation: '火柴棒问题的基本要求，正确。' },
-    { id: 'q4', topicId: 'g3-match', type: 'multiple_choice', difficulty: 'medium', prompt: '火柴等式"5+5+5=550"，移动1根火柴使等式成立，怎么移？', options: ['移成545+5=550', '移成5+545=550', '移成5+5+5=15', '无法移动'], correctIndex: 1, explanation: '把第一个+的一根移到第二个5上变成545，5+545=550。' },
+    { id: 'q4', topicId: 'g3-match', type: 'multiple_choice', difficulty: 'medium', prompt: `火柴等式"5+5+5=550"，移动1根火柴使等式成立，怎么移？
+
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="38" font-size="28" fill="#2563eb" font-family="monospace" font-weight="bold">5+5+5=550</text>
+  <line x1="62" y1="10" x2="62" y2="50" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="50" y="58" font-size="11" fill="#dc2626">移这根</text>
+</svg>`, options: ['移成545+5=550', '移成5+545=550', '移成5+5+5=15', '无法移动'], correctIndex: 1, explanation: '把第一个+的一根移到第二个5上变成545，5+545=550。' },
     { id: 'q5', topicId: 'g3-match', type: 'fill_blank', difficulty: 'medium', prompt: '用火柴摆"1+1=1"，添加___根火柴可以使等式成立（不能移动原有火柴）。', correctAnswer: '1', acceptedAnswers: ['一', '1根'], explanation: '在第一个1前加一根变成11，11-1=1不对。或1+1=11需要添加到右边。实际：添加1根到右边1变成11，1+1≠11。题目有误。' },
     { id: 'q6', topicId: 'g3-match', type: 'true_false', difficulty: 'medium', prompt: '火柴棒数字中，8需要7根火柴。', isTrue: true, explanation: '数字8用7根火柴摆成，正确。' },
     { id: 'q7', topicId: 'g3-match', type: 'step_solution', difficulty: 'medium', prompt: '火柴等式"8-3=3"，移动1根火柴使等式成立。', steps: ['观察：8用7根，3用5根', '移动8的一根变成6：6-3=3成立', '或移动右边3的一根变成5：8-3=5成立'], explanation: '多种解法。' },

@@ -2,11 +2,55 @@ import type { Question } from '../../types'
 
 export const grade2Questions: Record<string, Question[]> = {
   'g2-plant': [
-    { id: 'q1', topicId: 'g2-plant', type: 'multiple_choice', difficulty: 'easy', prompt: '在一条路的一边种树，每隔5米种一棵，一共种了10棵树，这条路长多少米？', options: ['45米', '50米', '55米', '60米'], correctIndex: 0, explanation: '10棵树有9个间隔，9×5=45米。' },
+    { id: 'q1', topicId: 'g2-plant', type: 'multiple_choice', difficulty: 'easy', prompt: `在一条路的一边种树，每隔5米种一棵，一共种了10棵树，这条路长多少米？
+
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <line x1="10" y1="40" x2="230" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="10" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="35" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="60" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="85" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="110" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="135" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="160" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="185" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="210" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="235" cy="30" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <text x="18" y="56" font-size="11" fill="#dc2626">←5米→</text>
+</svg>`, options: ['45米', '50米', '55米', '60米'], correctIndex: 0, explanation: '10棵树有9个间隔，9×5=45米。' },
     { id: 'q2', topicId: 'g2-plant', type: 'fill_blank', difficulty: 'easy', prompt: '锯木头，锯成3段需要锯___次。', correctAnswer: '2', acceptedAnswers: ['两', '2次'], explanation: '锯成3段需要锯2次。' },
     { id: 'q3', topicId: 'g2-plant', type: 'true_false', difficulty: 'easy', prompt: '植树问题中，棵数=间隔数+1（两端都种）。', isTrue: true, explanation: '两端都种时，棵数比间隔数多1，正确。' },
-    { id: 'q4', topicId: 'g2-plant', type: 'multiple_choice', difficulty: 'medium', prompt: '在一条20米长的路两边种树，每隔4米种一棵（两端都种），一共种多少棵？', options: ['10棵', '12棵', '14棵', '16棵'], correctIndex: 1, explanation: '一边：20÷4+1=6棵，两边：6×2=12棵。' },
-    { id: 'q5', topicId: 'g2-plant', type: 'fill_blank', difficulty: 'medium', prompt: '圆形花坛周长24米，每隔3米种一棵树，需要___棵树。', correctAnswer: '8', acceptedAnswers: ['八', '8棵'], explanation: '圆形：棵数=间隔数=24÷3=8棵。' },
+    { id: 'q4', topicId: 'g2-plant', type: 'multiple_choice', difficulty: 'medium', prompt: `在一条20米长的路两边种树，每隔4米种一棵（两端都种），一共种多少棵？
+
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <line x1="10" y1="40" x2="230" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="10" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="55" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="100" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="145" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="190" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="235" cy="20" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="10" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="55" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="100" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="145" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="190" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="235" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <text x="20" y="38" font-size="11" fill="#dc2626">←4米→</text>
+</svg>`, options: ['10棵', '12棵', '14棵', '16棵'], correctIndex: 1, explanation: '一边：20÷4+1=6棵，两边：6×2=12棵。' },
+    { id: 'q5', topicId: 'g2-plant', type: 'fill_blank', difficulty: 'medium', prompt: `圆形花坛周长24米，每隔3米种一棵树，需要___棵树。
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="60" cy="10" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="110" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="60" cy="110" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="10" cy="60" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="95" cy="21" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="95" cy="99" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="25" cy="99" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <circle cx="25" cy="21" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+</svg>`, correctAnswer: '8', acceptedAnswers: ['八', '8棵'], explanation: '圆形：棵数=间隔数=24÷3=8棵。' },
     { id: 'q6', topicId: 'g2-plant', type: 'true_false', difficulty: 'medium', prompt: '锯木头，锯成n段需要锯n-1次。', isTrue: true, explanation: '每锯一次增加一段，锯成n段需n-1次，正确。' },
     { id: 'q7', topicId: 'g2-plant', type: 'step_solution', difficulty: 'medium', prompt: '在一条路的一边种树，路长30米，每隔6米种一棵，两端都种，需要多少棵树？', steps: ['间隔数=路长÷间隔距离=30÷6=5个', '两端都种：棵数=间隔数+1=5+1=6棵', '答：需要6棵树'], explanation: '两端都种公式：棵数=间隔数+1。' },
     { id: 'q8', topicId: 'g2-plant', type: 'multiple_choice', difficulty: 'hard', prompt: '在一条路的一边种树，路长100米，两端都不种，每隔10米种一棵，需要多少棵？', options: ['8棵', '9棵', '10棵', '11棵'], correctIndex: 1, explanation: '间隔数=100÷10=10，两端不种：棵数=10-1=9棵。' },
@@ -74,8 +118,21 @@ export const grade2Questions: Record<string, Question[]> = {
     { id: 'q10', topicId: 'g2-age', type: 'true_false', difficulty: 'hard', prompt: '妈妈今年36岁，女儿今年9岁，4年后妈妈的年龄是女儿的3倍。', isTrue: false, explanation: '4年后：妈妈40岁，女儿13岁，40÷13≈3.08倍，不是整3倍，错误。' },
   ],
   'g2-geometry': [
-    { id: 'q1', topicId: 'g2-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: '用2个正方形可以拼成什么图形？', options: ['三角形', '长方形', '圆形', '梯形'], correctIndex: 1, explanation: '2个正方形可以拼成长方形。' },
-    { id: 'q2', topicId: 'g2-geometry', type: 'fill_blank', difficulty: 'easy', prompt: '用4个小正方形可以拼成一个大___形。', correctAnswer: '正方', acceptedAnswers: ['正方形'], explanation: '4个小正方形排成2×2可拼成大正方形。' },
+    { id: 'q1', topicId: 'g2-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: `用2个正方形可以拼成什么图形？
+
+<svg width="160" height="70" viewBox="0 0 160 70" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="10" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="40" font-size="13" fill="#2563eb">→ ?</text>
+</svg>`, options: ['三角形', '长方形', '圆形', '梯形'], correctIndex: 1, explanation: '2个正方形可以拼成长方形。' },
+    { id: 'q2', topicId: 'g2-geometry', type: 'fill_blank', difficulty: 'easy', prompt: `用4个小正方形可以拼成一个大___形。
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="10" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="10" y="60" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="60" y="60" width="50" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+</svg>`, correctAnswer: '正方', acceptedAnswers: ['正方形'], explanation: '4个小正方形排成2×2可拼成大正方形。' },
     { id: 'q3', topicId: 'g2-geometry', type: 'true_false', difficulty: 'easy', prompt: '两个完全相同的三角形可以拼成一个平行四边形。', isTrue: true, explanation: '两个全等三角形可以拼成平行四边形，正确。' },
     { id: 'q4', topicId: 'g2-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: '用7根火柴棒摆成2个正方形，至少需要移动几根？', options: ['1根', '2根', '3根', '不可能'], correctIndex: 3, explanation: '1个正方形需4根，2个正方形至少需7根（共边），7根正好摆2个，无需移动。题目有误，应该是"用8根摆2个，移动2根变3个"。' },
     { id: 'q5', topicId: 'g2-geometry', type: 'fill_blank', difficulty: 'medium', prompt: '一个长方形剪成两个完全相同的小长方形，周长增加了___倍。', correctAnswer: '0', acceptedAnswers: ['不增加', '0倍'], explanation: '周长不变，只是分成两部分。实际增加2条切线长度，但题意不明。正确答案：周长和增加了原长方形的宽×2。' },
@@ -125,10 +182,51 @@ export const grade2Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g2-direction', type: 'multiple_choice', difficulty: 'easy', prompt: '小明面向北，向右转，他面向哪个方向？', options: ['东', '南', '西', '北'], correctIndex: 0, explanation: '北向右转是东。' },
     { id: 'q2', topicId: 'g2-direction', type: 'fill_blank', difficulty: 'easy', prompt: '太阳从___方升起。', correctAnswer: '东', acceptedAnswers: ['东方', '东边'], explanation: '太阳东升西落。' },
     { id: 'q3', topicId: 'g2-direction', type: 'true_false', difficulty: 'easy', prompt: '地图上通常上北下南，左西右东。', isTrue: true, explanation: '地图的基本方向规则，正确。' },
-    { id: 'q4', topicId: 'g2-direction', type: 'multiple_choice', difficulty: 'medium', prompt: '小红面向南，向后转，再向左转，她面向哪个方向？', options: ['东', '南', '西', '北'], correctIndex: 0, explanation: '南向后转是北，北向左转是西...等等，北向左是西。重新：南后转=北，北左转=西。题目答案应该是西。' },
+    { id: 'q4', topicId: 'g2-direction', type: 'multiple_choice', difficulty: 'medium', prompt: `小红面向南，向后转，再向左转，她面向哪个方向？
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <text x="52" y="16" font-size="13" fill="#2563eb" font-weight="bold">北</text>
+  <text x="52" y="114" font-size="13" fill="#2563eb" font-weight="bold">南</text>
+  <text x="4" y="64" font-size="13" fill="#2563eb" font-weight="bold">西</text>
+  <text x="104" y="64" font-size="13" fill="#2563eb" font-weight="bold">东</text>
+  <line x1="60" y1="20" x2="60" y2="100" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="20" y1="60" x2="100" y2="60" stroke="#e5e7eb" stroke-width="1"/>
+  <circle cx="60" cy="60" r="8" fill="#dc2626"/>
+  <path d="M 60 60 L 60 80 L 55 75 M 60 80 L 65 75" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="66" y="85" font-size="11" fill="#dc2626">①南</text>
+  <path d="M 60 60 L 60 40 L 55 45 M 60 40 L 65 45" stroke="#22c55e" stroke-width="2" fill="none"/>
+  <text x="66" y="35" font-size="11" fill="#22c55e">②后转</text>
+  <path d="M 60 60 L 40 60 L 45 55 M 40 60 L 45 65" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <text x="20" y="50" font-size="11" fill="#f59e0b">③左转</text>
+</svg>`, options: ['东', '南', '西', '北'], correctIndex: 2, explanation: '南向后转是北，北向左转是西。' },
     { id: 'q5', topicId: 'g2-direction', type: 'fill_blank', difficulty: 'medium', prompt: '学校在家的北面，那么家在学校的___面。', correctAnswer: '南', acceptedAnswers: ['南方', '南边'], explanation: '相对方向。' },
     { id: 'q6', topicId: 'g2-direction', type: 'true_false', difficulty: 'medium', prompt: '面向东，向右转90度是面向南。', isTrue: true, explanation: '东向右转90度是南，正确。' },
-    { id: 'q7', topicId: 'g2-direction', type: 'step_solution', difficulty: 'medium', prompt: '小明从家出发，向北走100米到学校，再向东走50米到公园，公园在家的什么方向？', steps: ['画图：家为起点，向北100米到学校', '从学校向东50米到公园', '公园在家的东北方向'], explanation: '综合两个方向。' },
+    { id: 'q7', topicId: 'g2-direction', type: 'step_solution', difficulty: 'medium', prompt: `小明从家出发，向北走100米到学校，再向东走50米到公园，公园在家的什么方向？
+
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <text x="72" y="16" font-size="13" fill="#2563eb" font-weight="bold">北</text>
+  <text x="144" y="84" font-size="13" fill="#2563eb" font-weight="bold">东</text>
+  <circle cx="40" cy="140" r="8" fill="#dc2626"/>
+  <text x="10" y="155" font-size="13" fill="#dc2626" font-weight="bold">家</text>
+  <line x1="40" y1="140" x2="40" y2="60" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowblue)"/>
+  <text x="45" y="100" font-size="11" fill="#2563eb">100米</text>
+  <circle cx="40" cy="60" r="8" fill="#22c55e"/>
+  <text x="10" y="50" font-size="13" fill="#22c55e" font-weight="bold">学校</text>
+  <line x1="40" y1="60" x2="120" y2="60" stroke="#f59e0b" stroke-width="2" marker-end="url(#arroworange)"/>
+  <text x="65" y="55" font-size="11" fill="#f59e0b">50米</text>
+  <circle cx="120" cy="60" r="8" fill="#8b5cf6"/>
+  <text x="90" y="50" font-size="13" fill="#8b5cf6" font-weight="bold">公园</text>
+  <line x1="40" y1="140" x2="120" y2="60" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="70" y="110" font-size="11" fill="#6b7280">东北方向</text>
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>`, steps: ['画图：家为起点，向北100米到学校', '从学校向东50米到公园', '公园在家的东北方向'], explanation: '综合两个方向。' },
     { id: 'q8', topicId: 'g2-direction', type: 'multiple_choice', difficulty: 'hard', prompt: '小华面向北，顺时针转了270度，他面向哪个方向？', options: ['东', '南', '西', '北'], correctIndex: 2, explanation: '顺时针270度=逆时针90度，北逆时针90度是西。' },
     { id: 'q9', topicId: 'g2-direction', type: 'fill_blank', difficulty: 'hard', prompt: '教室的东面是操场，南面是食堂，操场在食堂的___面。', correctAnswer: '东北', acceptedAnswers: ['东北方', '东北边'], explanation: '操场在东，食堂在南，操场相对食堂在东北。' },
     { id: 'q10', topicId: 'g2-direction', type: 'true_false', difficulty: 'hard', prompt: '如果A在B的东北方向，那么B一定在A的西南方向。', isTrue: true, explanation: '相对方向关系，正确。' },

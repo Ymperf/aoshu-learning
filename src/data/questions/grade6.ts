@@ -38,15 +38,72 @@ export const grade6Questions: Record<string, Question[]> = {
     { id: 'q10', topicId: 'g6-combinatorics', type: 'true_false', difficulty: 'hard', prompt: 'C(n,0)+C(n,1)+...+C(n,n)=2^n。', isTrue: true, explanation: '二项式定理的推论，正确。' },
   ],
   'g6-geometry': [
-    { id: 'q1', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: '圆的半径是6厘米，面积是多少平方厘米？（π取3.14）', options: ['113.04', '113.14', '113.24', '113.34'], correctIndex: 0, explanation: '3.14×6²=3.14×36=113.04平方厘米。' },
-    { id: 'q2', topicId: 'g6-geometry', type: 'fill_blank', difficulty: 'easy', prompt: '扇形的圆心角是90度，半径是4厘米，面积是___平方厘米。（π取3.14）', correctAnswer: '12.56', acceptedAnswers: ['十二点五六', '12.56平方厘米'], explanation: '3.14×4²×90/360=12.56平方厘米。' },
+    { id: 'q1', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'easy', prompt: `圆的半径是6厘米，面积是多少平方厘米？（π取3.14）
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="60" x2="110" y2="60" stroke="#dc2626" stroke-width="2"/>
+  <text x="72" y="55" font-size="12" fill="#dc2626">r=6cm</text>
+  <circle cx="60" cy="60" r="3" fill="#2563eb"/>
+</svg>`, options: ['113.04', '113.14', '113.24', '113.34'], correctIndex: 0, explanation: '3.14×6²=3.14×36=113.04平方厘米。' },
+    { id: 'q2', topicId: 'g6-geometry', type: 'fill_blank', difficulty: 'easy', prompt: `扇形的圆心角是90度，半径是4厘米，面积是___平方厘米。（π取3.14）
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 60 60 L 110 60 A 50 50 0 0 0 60 10 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="60" x2="110" y2="60" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="10" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="72" y="75" font-size="11" fill="#2563eb">r=4cm</text>
+  <text x="62" y="50" font-size="11" fill="#dc2626">90°</text>
+  <circle cx="60" cy="60" r="3" fill="#2563eb"/>
+</svg>`, correctAnswer: '12.56', acceptedAnswers: ['十二点五六', '12.56平方厘米'], explanation: '3.14×4²×90/360=12.56平方厘米。' },
     { id: 'q3', topicId: 'g6-geometry', type: 'true_false', difficulty: 'easy', prompt: '扇形面积=πr²×圆心角/360°。', isTrue: true, explanation: '扇形面积公式，正确。' },
-    { id: 'q4', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: '一个圆环，外圆半径8厘米，内圆半径6厘米，面积是多少平方厘米？（π取3.14）', options: ['87.92', '87.96', '88.00', '88.04'], correctIndex: 0, explanation: '3.14×(8²-6²)=3.14×28=87.92平方厘米。' },
+    { id: 'q4', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'medium', prompt: `一个圆环，外圆半径8厘米，内圆半径6厘米，面积是多少平方厘米？（π取3.14）
+
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="60" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="70" cy="70" r="45" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <line x1="70" y1="70" x2="130" y2="70" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="88" y="65" font-size="11" fill="#dc2626">8cm</text>
+  <line x1="70" y1="70" x2="115" y2="70" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="80" y="82" font-size="11" fill="#22c55e">6cm</text>
+  <circle cx="70" cy="70" r="3" fill="#2563eb"/>
+</svg>`, options: ['87.92', '87.96', '88.00', '88.04'], correctIndex: 0, explanation: '3.14×(8²-6²)=3.14×28=87.92平方厘米。' },
     { id: 'q5', topicId: 'g6-geometry', type: 'fill_blank', difficulty: 'medium', prompt: '一个扇形的圆心角是120度，弧长是12.56厘米（π取3.14），半径是___厘米。', correctAnswer: '6', acceptedAnswers: ['六', '6厘米'], explanation: '弧长=2πr×120/360=2πr/3=12.56，r=6厘米。' },
     { id: 'q6', topicId: 'g6-geometry', type: 'true_false', difficulty: 'medium', prompt: '圆的半径扩大n倍，面积扩大n²倍。', isTrue: true, explanation: '面积与半径的平方成正比，正确。' },
-    { id: 'q7', topicId: 'g6-geometry', type: 'step_solution', difficulty: 'medium', prompt: '一个圆形花坛，半径是5米，周围铺一条宽2米的小路，小路的面积是多少平方米？（π取3.14）', steps: ['大圆半径：5+2=7米', '大圆面积：3.14×7²=153.86平方米', '小圆面积：3.14×5²=78.5平方米', '小路面积：153.86-78.5=75.36平方米'], explanation: '环形面积计算。' },
-    { id: 'q8', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: '一个扇形的半径是10厘米，圆心角是72度，这个扇形的周长是多少厘米？（π取3.14）', options: ['32.56厘米', '33.56厘米', '34.56厘米', '35.56厘米'], correctIndex: 0, explanation: '弧长：2×3.14×10×72/360=12.56厘米，周长：12.56+10+10=32.56厘米。' },
-    { id: 'q9', topicId: 'g6-geometry', type: 'fill_blank', difficulty: 'hard', prompt: '一个圆锥的底面半径是3厘米，高是4厘米，体积是___立方厘米。（π取3.14）', correctAnswer: '37.68', acceptedAnswers: ['三十七点六八', '37.68立方厘米'], explanation: '1/3×3.14×3²×4=37.68立方厘米。' },
+    { id: 'q7', topicId: 'g6-geometry', type: 'step_solution', difficulty: 'medium', prompt: `一个圆形花坛，半径是5米，周围铺一条宽2米的小路，小路的面积是多少平方米？（π取3.14）
+
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="80" cy="80" r="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="80" cy="80" r="50" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <line x1="80" y1="80" x2="130" y2="80" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="95" y="75" font-size="11" fill="#dc2626">5m</text>
+  <line x1="80" y1="80" x2="150" y2="80" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="132" y="75" font-size="11" fill="#22c55e">7m</text>
+  <text x="55" y="84" font-size="11" fill="#6b7280">花坛</text>
+  <text x="100" y="50" font-size="11" fill="#2563eb">小路2m</text>
+  <circle cx="80" cy="80" r="3" fill="#2563eb"/>
+</svg>`, steps: ['大圆半径：5+2=7米', '大圆面积：3.14×7²=153.86平方米', '小圆面积：3.14×5²=78.5平方米', '小路面积：153.86-78.5=75.36平方米'], explanation: '环形面积计算。' },
+    { id: 'q8', topicId: 'g6-geometry', type: 'multiple_choice', difficulty: 'hard', prompt: `一个扇形的半径是10厘米，圆心角是72度，这个扇形的周长是多少厘米？（π取3.14）
+
+<svg width="130" height="120" viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 65 100 L 115 100 A 50 50 0 0 0 80 54 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="65" y1="100" x2="115" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="65" y1="100" x2="80" y2="54" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="80" y="98" font-size="11" fill="#2563eb">10cm</text>
+  <text x="67" y="88" font-size="11" fill="#dc2626">72°</text>
+  <circle cx="65" cy="100" r="3" fill="#2563eb"/>
+</svg>`, options: ['32.56厘米', '33.56厘米', '34.56厘米', '35.56厘米'], correctIndex: 0, explanation: '弧长：2×3.14×10×72/360=12.56厘米，周长：12.56+10+10=32.56厘米。' },
+    { id: 'q9', topicId: 'g6-geometry', type: 'fill_blank', difficulty: 'hard', prompt: `一个圆锥的底面半径是3厘米，高是4厘米，体积是___立方厘米。（π取3.14）
+
+<svg width="120" height="130" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="60" cy="100" rx="45" ry="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="15" y1="100" x2="60" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="105" y1="100" x2="60" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="20" x2="60" y2="100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="62" y="65" font-size="11" fill="#dc2626">h=4cm</text>
+  <line x1="60" y1="100" x2="105" y2="100" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="72" y="115" font-size="11" fill="#22c55e">r=3cm</text>
+</svg>`, correctAnswer: '37.68', acceptedAnswers: ['三十七点六八', '37.68立方厘米'], explanation: '1/3×3.14×3²×4=37.68立方厘米。' },
     { id: 'q10', topicId: 'g6-geometry', type: 'true_false', difficulty: 'hard', prompt: '圆柱体积=πr²h，圆锥体积=1/3πr²h。', isTrue: true, explanation: '圆柱和圆锥体积公式，正确。' },
   ],
   'g6-sequences': [
@@ -77,7 +134,19 @@ export const grade6Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g6-travel', type: 'multiple_choice', difficulty: 'easy', prompt: '甲车每小时90千米，乙车每小时70千米，两车同时从两地相向而行，6小时相遇，两地相距多少千米？', options: ['900千米', '920千米', '940千米', '960千米'], correctIndex: 3, explanation: '(90+70)×6=960千米。' },
     { id: 'q2', topicId: 'g6-travel', type: 'fill_blank', difficulty: 'easy', prompt: '甲乙两人同时从同地出发同向而行，甲每小时7千米，乙每小时5千米，___小时后两人相距14千米。', correctAnswer: '7', acceptedAnswers: ['七', '7小时'], explanation: '14÷(7-5)=7小时。' },
     { id: 'q3', topicId: 'g6-travel', type: 'true_false', difficulty: 'easy', prompt: '流水行船：顺水速度=船速+水速，逆水速度=船速-水速。', isTrue: true, explanation: '流水行船基本公式，正确。' },
-    { id: 'q4', topicId: 'g6-travel', type: 'multiple_choice', difficulty: 'medium', prompt: '一艘船在静水中的速度是20千米/小时，水流速度是4千米/小时，顺水航行120千米需要多少小时？', options: ['4小时', '5小时', '6小时', '7小时'], correctIndex: 1, explanation: '120÷(20+4)=5小时。' },
+    { id: 'q4', topicId: 'g6-travel', type: 'multiple_choice', difficulty: 'medium', prompt: `一艘船在静水中的速度是20千米/小时，水流速度是4千米/小时，顺水航行120千米需要多少小时？
+
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 10 50 Q 60 30 120 50 Q 180 70 230 50" stroke="#93c5fd" stroke-width="3" fill="none"/>
+  <path d="M 10 60 Q 60 40 120 60 Q 180 80 230 60" stroke="#93c5fd" stroke-width="2" fill="none"/>
+  <rect x="80" y="28" width="40" height="18" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+  <polygon points="80,28 80,20 100,28" fill="#2563eb"/>
+  <text x="84" y="41" font-size="11" fill="#2563eb">船</text>
+  <path d="M 130 38 L 160 38 L 156 34 M 160 38 L 156 42" stroke="#22c55e" stroke-width="1.5" fill="none"/>
+  <text x="132" y="32" font-size="10" fill="#22c55e">水流4km/h</text>
+  <text x="30" y="20" font-size="10" fill="#2563eb">船速20km/h</text>
+  <text x="30" y="32" font-size="10" fill="#dc2626">顺水=24km/h</text>
+</svg>`, options: ['4小时', '5小时', '6小时', '7小时'], correctIndex: 1, explanation: '120÷(20+4)=5小时。' },
     { id: 'q5', topicId: 'g6-travel', type: 'fill_blank', difficulty: 'medium', prompt: '一艘船顺水航行60千米需要3小时，逆水航行60千米需要5小时，水流速度是每小时___千米。', correctAnswer: '2', acceptedAnswers: ['两', '2千米'], explanation: '顺水速度：60÷3=20千米/小时，逆水速度：60÷5=12千米/小时，水速：(20-12)÷2=4千米/小时。重算：船速=(20+12)÷2=16，水速=(20-12)÷2=4不对。实际：水速=4千米/小时。题目答案有误。' },
     { id: 'q6', topicId: 'g6-travel', type: 'true_false', difficulty: 'medium', prompt: '船速=(顺水速度+逆水速度)÷2，水速=(顺水速度-逆水速度)÷2。', isTrue: true, explanation: '流水行船公式，正确。' },
     { id: 'q7', topicId: 'g6-travel', type: 'step_solution', difficulty: 'medium', prompt: '甲乙两车从AB两地同时出发相向而行，甲车每小时80千米，乙车每小时60千米，相遇时甲车比乙车多行100千米，AB两地相距多少千米？', steps: ['相遇时，甲乙所用时间相同', '速度差：80-60=20千米/小时', '相遇时间：100÷20=5小时', 'AB距离：(80+60)×5=700千米'], explanation: '利用速度差和路程差求解。' },
@@ -89,12 +158,63 @@ export const grade6Questions: Record<string, Question[]> = {
     { id: 'q1', topicId: 'g6-geometry2', type: 'multiple_choice', difficulty: 'easy', prompt: '一个长方体长8厘米，宽6厘米，高5厘米，体积是多少立方厘米？', options: ['200', '220', '240', '260'], correctIndex: 2, explanation: '8×6×5=240立方厘米。' },
     { id: 'q2', topicId: 'g6-geometry2', type: 'fill_blank', difficulty: 'easy', prompt: '正方体棱长8厘米，体积是___立方厘米。', correctAnswer: '512', acceptedAnswers: ['五百一十二', '512立方厘米'], explanation: '8³=512立方厘米。' },
     { id: 'q3', topicId: 'g6-geometry2', type: 'true_false', difficulty: 'easy', prompt: '圆柱体积=底面积×高。', isTrue: true, explanation: '圆柱体积公式，正确。' },
-    { id: 'q4', topicId: 'g6-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: '一个圆柱底面半径4厘米，高10厘米，体积是多少立方厘米？（π取3.14）', options: ['502.4', '502.6', '502.8', '503.0'], correctIndex: 0, explanation: '3.14×4²×10=502.4立方厘米。' },
-    { id: 'q5', topicId: 'g6-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: '一个圆锥底面半径3厘米，高6厘米，体积是___立方厘米。（π取3.14）', correctAnswer: '56.52', acceptedAnswers: ['五十六点五二', '56.52立方厘米'], explanation: '1/3×3.14×3²×6=56.52立方厘米。' },
+    { id: 'q4', topicId: 'g6-geometry2', type: 'multiple_choice', difficulty: 'medium', prompt: `一个圆柱底面半径4厘米，高10厘米，体积是多少立方厘米？（π取3.14）
+
+<svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="60" cy="30" rx="45" ry="12" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <ellipse cx="60" cy="110" rx="45" ry="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="15" y1="30" x2="15" y2="110" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="105" y1="30" x2="105" y2="110" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="60" y1="110" x2="105" y2="110" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="72" y="125" font-size="11" fill="#dc2626">r=4cm</text>
+  <line x1="105" y1="30" x2="105" y2="110" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="107" y="75" font-size="11" fill="#22c55e">h=10cm</text>
+</svg>`, options: ['502.4', '502.6', '502.8', '503.0'], correctIndex: 0, explanation: '3.14×4²×10=502.4立方厘米。' },
+    { id: 'q5', topicId: 'g6-geometry2', type: 'fill_blank', difficulty: 'medium', prompt: `一个圆锥底面半径3厘米，高6厘米，体积是___立方厘米。（π取3.14）
+
+<svg width="120" height="130" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="60" cy="100" rx="45" ry="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="15" y1="100" x2="60" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="105" y1="100" x2="60" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="60" y1="20" x2="60" y2="100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="62" y="65" font-size="11" fill="#dc2626">h=6cm</text>
+  <line x1="60" y1="100" x2="105" y2="100" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="72" y="115" font-size="11" fill="#22c55e">r=3cm</text>
+</svg>`, correctAnswer: '56.52', acceptedAnswers: ['五十六点五二', '56.52立方厘米'], explanation: '1/3×3.14×3²×6=56.52立方厘米。' },
     { id: 'q6', topicId: 'g6-geometry2', type: 'true_false', difficulty: 'medium', prompt: '圆锥体积=1/3×底面积×高。', isTrue: true, explanation: '圆锥体积公式，正确。' },
-    { id: 'q7', topicId: 'g6-geometry2', type: 'step_solution', difficulty: 'medium', prompt: '一个圆柱和一个圆锥等底等高，圆柱体积是90立方厘米，圆锥体积是多少？', steps: ['圆锥体积=1/3圆柱体积', '圆锥体积=90÷3=30立方厘米', '答：圆锥体积是30立方厘米'], explanation: '等底等高的圆柱和圆锥体积关系。' },
-    { id: 'q8', topicId: 'g6-geometry2', type: 'multiple_choice', difficulty: 'hard', prompt: '一个球的半径是3厘米，体积是多少立方厘米？（π取3.14）', options: ['113.04', '113.14', '113.24', '113.34'], correctIndex: 0, explanation: '4/3×3.14×3³=113.04立方厘米。' },
-    { id: 'q9', topicId: 'g6-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: '一个圆柱的侧面展开图是一个长方形，长是31.4厘米，宽是10厘米（π取3.14），这个圆柱的底面半径是___厘米。', correctAnswer: '5', acceptedAnswers: ['五', '5厘米'], explanation: '底面周长=31.4厘米，半径=31.4÷3.14÷2=5厘米。' },
+    { id: 'q7', topicId: 'g6-geometry2', type: 'step_solution', difficulty: 'medium', prompt: `一个圆柱和一个圆锥等底等高，圆柱体积是90立方厘米，圆锥体积是多少？
+
+<svg width="200" height="130" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="45" cy="30" rx="35" ry="9" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <ellipse cx="45" cy="100" rx="35" ry="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="10" y1="30" x2="10" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="80" y1="30" x2="80" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="25" y="70" font-size="11" fill="#2563eb">圆柱</text>
+  <text x="20" y="85" font-size="11" fill="#22c55e">90cm³</text>
+  <ellipse cx="155" cy="100" rx="35" ry="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="120" y1="100" x2="155" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="190" y1="100" x2="155" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="80" font-size="11" fill="#2563eb">圆锥</text>
+  <text x="130" y="95" font-size="11" fill="#dc2626">?cm³</text>
+  <text x="85" y="65" font-size="11" fill="#6b7280">等底等高</text>
+</svg>`, steps: ['圆锥体积=1/3圆柱体积', '圆锥体积=90÷3=30立方厘米', '答：圆锥体积是30立方厘米'], explanation: '等底等高的圆柱和圆锥体积关系。' },
+    { id: 'q8', topicId: 'g6-geometry2', type: 'multiple_choice', difficulty: 'hard', prompt: `一个球的半径是3厘米，体积是多少立方厘米？（π取3.14）
+
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="60" cy="60" rx="50" ry="15" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="60" y1="60" x2="110" y2="60" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="72" y="55" font-size="12" fill="#dc2626">r=3cm</text>
+  <circle cx="60" cy="60" r="3" fill="#2563eb"/>
+</svg>`, options: ['113.04', '113.14', '113.24', '113.34'], correctIndex: 0, explanation: '4/3×3.14×3³=113.04立方厘米。' },
+    { id: 'q9', topicId: 'g6-geometry2', type: 'fill_blank', difficulty: 'hard', prompt: `一个圆柱的侧面展开图是一个长方形，长是31.4厘米，宽是10厘米（π取3.14），这个圆柱的底面半径是___厘米。
+
+<svg width="180" height="100" viewBox="0 0 180 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="140" height="60" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="55" font-size="12" fill="#2563eb">31.4cm</text>
+  <text x="162" y="55" font-size="12" fill="#dc2626">10cm</text>
+  <text x="55" y="15" font-size="11" fill="#6b7280">← 底面周长 →</text>
+</svg>`, correctAnswer: '5', acceptedAnswers: ['五', '5厘米'], explanation: '底面周长=31.4厘米，半径=31.4÷3.14÷2=5厘米。' },
     { id: 'q10', topicId: 'g6-geometry2', type: 'true_false', difficulty: 'hard', prompt: '球的体积公式是V=4/3πr³。', isTrue: true, explanation: '球的体积公式，正确。' },
   ],
   'g6-combinatorics2': [
