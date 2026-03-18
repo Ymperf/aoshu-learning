@@ -1,17 +1,21 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { UserButton, SignInButton, useUser } from '@clerk/react'
 import { useAuth } from '../../hooks/useAuth'
+import LoginModal from '../auth/LoginModal'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
-  useAuth()
-  const { isSignedIn } = useUser()
+  const { isSignedIn, user, signOut, refresh } = useAuth()
+  const [showLogin, setShowLogin] = useState(false)
 
   const navItems = [
     { to: '/', label: '首页' },
     { to: '/browse', label: '专题' },
     { to: '/progress', label: '进度' },
   ]
+
+  const phone = user?.get('mobilePhoneNumber') as string | undefined
+  const displayPhone = phone ? `${phone.slice(0, 3)}****${phone.slice(-4)}` : ''
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -36,10 +40,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             </nav>
             <div className="ml-2">
               {isSignedIn
-                ? <UserButton />
-                : <SignInButton mode="modal">
-                    <button className="px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100">登录</button>
-                  </SignInButton>
+                ? <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-500">{displayPhone}</span>
+                    <button onClick={signOut} className="text-xs text-gray-400 hover:text-gray-600">退出</button>
+                  </div>
+                : <button onClick={() => setShowLogin(true)}
+                    className="px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100">
+                    登录
+                  </button>
               }
             </div>
           </div>
@@ -48,6 +56,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <main className="max-w-4xl mx-auto px-4 py-6">
         {children}
       </main>
+      {showLogin && (
+        <LoginModal
+          onClose={() => setShowLogin(false)}
+          onSuccess={() => { setShowLogin(false); refresh() }}
+        />
+      )}
     </div>
   )
 }
