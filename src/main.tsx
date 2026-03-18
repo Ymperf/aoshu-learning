@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './lib/leancloud'
 import { AuthProvider } from './hooks/useAuth'
 import App from './App'
 import './index.css'

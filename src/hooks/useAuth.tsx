@@ -1,50 +1,70 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-import AV from '../lib/leancloud'
+import authing from '../lib/authing'
 import { useProgressStore } from '../store/progressStore'
 
+interface UserInfo {
+  sub: string
+  name?: string
+  phone?: string
+  email?: string
+}
+
 interface AuthContextType {
-  user: AV.User | null
+  user: UserInfo | null
   isSignedIn: boolean
   isLoaded: boolean
-  refresh: () => void
-  signOut: () => Promise<void>
+  login: () => void
+  signOut: () => void
 }
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
   isSignedIn: false,
   isLoaded: false,
-  refresh: () => {},
-  signOut: async () => {},
+  login: () => {},
+  signOut: () => {},
 })
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<AV.User | null>(null)
+  const [user, setUser] = useState<UserInfo | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const setUserId = useProgressStore(s => s.setUserId)
 
-  const refresh = () => {
-    const current = AV.User.current()
-    setUser(current)
-    setUserId(current ? current.id ?? null : null)
-  }
-
   useEffect(() => {
-    const current = AV.User.current()
-    setUser(current)
-    setUserId(current ? current.id ?? null : null)
-    setIsLoaded(true)
+    const init = async () => {
+      try {
+        if (authing.isRedirectCallback()) {
+          await authing.handleRedirectCallback()
+        }
+        const state = await authing.getLoginState()
+        if (state?.accessToken) {
+          const info = await authing.getUserInfo({ accessToken: state.accessToken })
+          const userInfo = info as unknown as UserInfo
+          setUser(userInfo)
+          setUserId(userInfo.sub ?? null)
+        }
+      } catch {
+        // 未登录，忽略
+      } finally {
+        setIsLoaded(true)
+      }
+    }
+    init()
   }, [])
 
-  const signOut = async () => {
-    await AV.User.logOut()
+  const login = () => {
+    authing.loginWithPopup()
+  }
+
+  const signOut = () => {
+    authing.logoutWithRedirect()
     setUser(null)
     setUserId(null)
   }
 
   return (
-    <AuthContext.Provider value={{ user, isSignedIn: !!user, isLoaded, refresh, signOut }}>
+    <AuthContext.Provider value={{ user, isSignedIn: !!user, isLoaded, login, signOut }}>
       {children}
     </AuthContext.Provider>
   )

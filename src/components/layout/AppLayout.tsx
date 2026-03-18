@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
-import LoginModal from '../auth/LoginModal'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
-  const { isSignedIn, user, signOut, refresh } = useAuth()
-  const [showLogin, setShowLogin] = useState(false)
+  const { isSignedIn, user, signOut, login } = useAuth()
 
   const navItems = [
     { to: '/', label: '首页' },
@@ -14,8 +11,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     { to: '/progress', label: '进度' },
   ]
 
-  const phone = user?.get('mobilePhoneNumber') as string | undefined
-  const displayPhone = phone ? `${phone.slice(0, 3)}****${phone.slice(-4)}` : ''
+  const displayName = user?.phone
+    ? `${user.phone.slice(0, 3)}****${user.phone.slice(-4)}`
+    : user?.email ?? user?.name ?? '已登录'
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -41,10 +39,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <div className="ml-2">
               {isSignedIn
                 ? <div className="flex items-center gap-2">
-                    <span className="text-xs text-gray-500">{displayPhone}</span>
+                    <span className="text-xs text-gray-500">{displayName}</span>
                     <button onClick={signOut} className="text-xs text-gray-400 hover:text-gray-600">退出</button>
                   </div>
-                : <button onClick={() => setShowLogin(true)}
+                : <button onClick={login}
                     className="px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100">
                     登录
                   </button>
@@ -56,12 +54,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <main className="max-w-4xl mx-auto px-4 py-6">
         {children}
       </main>
-      {showLogin && (
-        <LoginModal
-          onClose={() => setShowLogin(false)}
-          onSuccess={() => { setShowLogin(false); refresh() }}
-        />
-      )}
     </div>
   )
 }

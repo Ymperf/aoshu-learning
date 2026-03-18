@@ -12,7 +12,6 @@ import TrueFalse from '../components/practice/TrueFalse'
 import FeedbackPanel from '../components/practice/FeedbackPanel'
 import SessionSummary from '../components/practice/SessionSummary'
 import { useProgress } from '../hooks/useProgress'
-import LoginModal from '../components/auth/LoginModal'
 
 type AnswerState = {
   value: unknown
@@ -24,8 +23,7 @@ export default function PracticePage() {
   const { topicId } = useParams<{ topicId: string }>()
   const topic = TOPICS.find(t => t.id === topicId)
   const { recordSession } = useProgress(topicId)
-  const { isSignedIn, refresh } = useAuth()
-  const [showLogin, setShowLogin] = useState(false)
+  const { isSignedIn, login } = useAuth()
 
   const [questions, setQuestions] = useState<Question[]>(() => getQuestions(topicId ?? ''))
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -87,14 +85,8 @@ export default function PracticePage() {
         {!isSignedIn && (
           <div className="mt-2 p-3 bg-blue-50 rounded-lg text-sm text-blue-700 text-center">
             <p>登录后保存练习记录，随时查看进度</p>
-            <button onClick={() => setShowLogin(true)}
+            <button onClick={login}
               className="mt-2 px-4 py-1.5 bg-blue-600 text-white rounded-md text-sm">立即登录</button>
-            {showLogin && (
-              <LoginModal
-                onClose={() => setShowLogin(false)}
-                onSuccess={() => { setShowLogin(false); refresh() }}
-              />
-            )}
           </div>
         )}
       </div>
