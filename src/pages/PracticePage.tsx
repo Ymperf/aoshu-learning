@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { SignInButton, useUser } from '@clerk/react'
 import { TOPICS, GRADE_LABELS } from '../data/curriculum'
 import { getQuestions } from '../data/questions'
 import type { Question } from '../types'
@@ -22,6 +23,7 @@ export default function PracticePage() {
   const { topicId } = useParams<{ topicId: string }>()
   const topic = TOPICS.find(t => t.id === topicId)
   const { recordSession } = useProgress(topicId)
+  const { isSignedIn } = useUser()
 
   const [questions, setQuestions] = useState<Question[]>(() => getQuestions(topicId ?? ''))
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -80,6 +82,14 @@ export default function PracticePage() {
           total={questions.length}
           onRetry={handleRetry}
         />
+        {!isSignedIn && (
+          <div className="mt-2 p-3 bg-blue-50 rounded-lg text-sm text-blue-700 text-center">
+            <p>登录后保存练习记录，随时查看进度</p>
+            <SignInButton mode="modal">
+              <button className="mt-2 px-4 py-1.5 bg-blue-600 text-white rounded-md text-sm">立即登录</button>
+            </SignInButton>
+          </div>
+        )}
       </div>
     )
   }

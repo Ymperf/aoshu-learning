@@ -5,6 +5,7 @@ import BrowsePage from './pages/BrowsePage'
 import TopicDetailPage from './pages/TopicDetailPage'
 import PracticePage from './pages/PracticePage'
 import ProgressPage from './pages/ProgressPage'
+import ProtectedRoute from './components/auth/ProtectedRoute'
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/topic/:topicId" element={<TopicDetailPage />} />
           <Route path="/topic/:topicId/practice" element={<PracticePage />} />
-          <Route path="/progress" element={<ProgressPage />} />
+          <Route path="/progress" element={<ProtectedRoute><ProgressPage /></ProtectedRoute>} />
         </Routes>
       </AppLayout>
     </BrowserRouter>

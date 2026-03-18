@@ -3,7 +3,9 @@ import { persist } from 'zustand/middleware'
 import type { UserProgress, TopicProgress } from '../types'
 
 interface ProgressStore {
+  userId: string | null
   progress: UserProgress
+  setUserId: (id: string | null) => void
   recordSession: (topicId: string, correct: number, total: number) => void
   getTopicProgress: (topicId: string) => TopicProgress | undefined
   clearProgress: () => void
@@ -12,7 +14,10 @@ interface ProgressStore {
 export const useProgressStore = create<ProgressStore>()(
   persist(
     (set, get) => ({
+      userId: null,
       progress: {},
+
+      setUserId: (id) => set({ userId: id }),
 
       recordSession: (topicId, correct, total) => {
         const existing = get().progress[topicId]
