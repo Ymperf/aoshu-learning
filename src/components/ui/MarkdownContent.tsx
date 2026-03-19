@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
 
 interface Props {
   content: string
@@ -11,6 +12,7 @@ export default function MarkdownContent({ content, className = '' }: Props) {
     <ReactMarkdown
       className={className}
       rehypePlugins={[rehypeRaw]}
+      remarkPlugins={[remarkGfm]}
       components={{
         // 自定义样式
         h1: ({ children }) => <h1 className="text-2xl font-bold mb-4 text-gray-900">{children}</h1>,
@@ -25,6 +27,16 @@ export default function MarkdownContent({ content, className = '' }: Props) {
             {children}
           </blockquote>
         ),
+        table: ({ children }) => (
+          <div className="overflow-x-auto mb-4">
+            <table className="min-w-full border border-gray-200 rounded-lg text-sm">{children}</table>
+          </div>
+        ),
+        thead: ({ children }) => <thead className="bg-blue-50">{children}</thead>,
+        tbody: ({ children }) => <tbody className="divide-y divide-gray-200">{children}</tbody>,
+        tr: ({ children }) => <tr>{children}</tr>,
+        th: ({ children }) => <th className="px-3 py-2 text-left font-semibold text-gray-700 border-b border-gray-200">{children}</th>,
+        td: ({ children }) => <td className="px-3 py-2 text-gray-700">{children}</td>,
         code: ({ children, className }) => {
           const isInline = !className
           return isInline ? (
