@@ -30,16 +30,11 @@ export const grade1Contents: Record<string, TopicContent> = {
         problem: `数一数下图中共有多少个三角形？
 
 <svg width="200" height="173" viewBox="0 0 200 173" xmlns="http://www.w3.org/2000/svg">
-  <!-- 大三角形外框 -->
   <polygon points="100,20 20,160 180,160" fill="none" stroke="#2563eb" stroke-width="3"/>
-  <!-- 中间竖线 -->
   <line x1="100" y1="20" x2="100" y2="160" stroke="#2563eb" stroke-width="3"/>
-  <!-- 左下到中点的线 -->
   <line x1="20" y1="160" x2="100" y2="90" stroke="#2563eb" stroke-width="3"/>
-  <!-- 右下到中点的线 -->
   <line x1="180" y1="160" x2="100" y2="90" stroke="#2563eb" stroke-width="3"/>
 
-  <!-- 标注小三角形 -->
   <text x="60" y="130" font-size="14" fill="#dc2626">①</text>
   <text x="130" y="130" font-size="14" fill="#dc2626">②</text>
   <text x="95" y="60" font-size="14" fill="#dc2626">③</text>
@@ -253,13 +248,11 @@ n 个小正方形排成一排，可以组成的正方形总数 = 1+2+3+…+n = n
         problem: `下图中有几个正方形？
 
 <svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
-  <!-- 4个小正方形 -->
   <rect x="10" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
   <rect x="50" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
   <rect x="90" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
   <rect x="130" y="10" width="40" height="40" fill="none" stroke="#2563eb" stroke-width="2"/>
 
-  <!-- 标注 -->
   <text x="25" y="35" font-size="16" fill="#dc2626" font-weight="bold">1</text>
   <text x="65" y="35" font-size="16" fill="#dc2626" font-weight="bold">2</text>
   <text x="105" y="35" font-size="16" fill="#dc2626" font-weight="bold">3</text>

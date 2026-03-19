@@ -30,10 +30,8 @@ export const grade3Contents: Record<string, TopicContent> = {
         problem: `笼中有鸡和兔共 10 只，数脚共 28 只，鸡和兔各有几只？
 
 <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- 笼子 -->
   <rect x="50" y="40" width="300" height="120" fill="none" stroke="#94a3b8" stroke-width="2" rx="5"/>
 
-  <!-- 鸡（6只） -->
   <g transform="translate(70, 80)">
     <circle cx="0" cy="0" r="12" fill="#fbbf24"/>
     <circle cx="30" cy="0" r="12" fill="#fbbf24"/>
@@ -44,7 +42,6 @@ export const grade3Contents: Record<string, TopicContent> = {
     <text x="30" y="60" font-size="12" fill="#92400e" text-anchor="middle">鸡(6只)</text>
   </g>
 
-  <!-- 兔（4只） -->
   <g transform="translate(220, 80)">
     <ellipse cx="0" cy="0" rx="15" ry="12" fill="#f87171"/>
     <ellipse cx="40" cy="0" rx="15" ry="12" fill="#f87171"/>
@@ -53,7 +50,6 @@ export const grade3Contents: Record<string, TopicContent> = {
     <text x="20" y="60" font-size="12" fill="#7f1d1d" text-anchor="middle">兔(4只)</text>
   </g>
 
-  <!-- 标注 -->
   <text x="200" y="25" font-size="14" fill="#374151" text-anchor="middle">共10只，28只脚</text>
   <text x="200" y="180" font-size="12" fill="#2563eb" text-anchor="middle">鸡2只脚 × 6 = 12只脚，兔4只脚 × 4 = 16只脚</text>
 </svg>`,
@@ -194,13 +190,10 @@ AB,AC,AD,AE,BC,BD,BE,CD,CE,DE
         problem: `L形图案：大长方形长8cm、宽6cm，挖去右上角长4cm、宽3cm的小长方形，求L形面积。
 
 <svg width="350" height="250" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
-  <!-- L形图案 -->
   <path d="M 50 50 L 210 50 L 210 110 L 130 110 L 130 170 L 50 170 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
 
-  <!-- 虚线显示挖去的部分 -->
   <rect x="130" y="50" width="80" height="60" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,5"/>
 
-  <!-- 标注 -->
   <text x="130" y="40" font-size="14" fill="#374151" text-anchor="middle">8cm</text>
   <line x1="50" y1="45" x2="210" y2="45" stroke="#374151" stroke-width="1" marker-end="url(#arrowhead)"/>
 
@@ -301,32 +294,25 @@ L形面积 = 48 - 12 = **36 cm²**`,
         problem: `甲乙两人从相距 60 千米的两地相向而行，甲速 20 千米/时，乙速 10 千米/时，几小时后相遇？
 
 <svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
-  <!-- 路线 -->
   <line x1="50" y1="90" x2="350" y2="90" stroke="#94a3b8" stroke-width="3"/>
 
-  <!-- A地和B地 -->
   <circle cx="50" cy="90" r="8" fill="#2563eb"/>
   <text x="50" y="75" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">A地</text>
 
   <circle cx="350" cy="90" r="8" fill="#dc2626"/>
   <text x="350" y="75" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">B地</text>
 
-  <!-- 距离标注 -->
   <text x="200" y="110" font-size="14" fill="#374151" text-anchor="middle">60千米</text>
 
-  <!-- 甲的箭头 -->
   <path d="M 70 90 L 180 90" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
   <text x="125" y="80" font-size="12" fill="#2563eb" text-anchor="middle">甲 20km/h</text>
 
-  <!-- 乙的箭头 -->
   <path d="M 330 90 L 220 90" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
   <text x="275" y="80" font-size="12" fill="#dc2626" text-anchor="middle">乙 10km/h</text>
 
-  <!-- 相遇点 -->
   <circle cx="200" cy="90" r="6" fill="#fbbf24"/>
   <text x="200" y="130" font-size="12" fill="#fbbf24" text-anchor="middle">相遇点</text>
 
-  <!-- 箭头定义 -->
   <defs>
     <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <polygon points="0 0, 10 3, 0 6" fill="#2563eb"/>
@@ -578,24 +564,16 @@ a=7：b=1 → 717 ✓
         problem: `一个由 4 行小三角形组成的大三角形（底边有4个小三角形），共有多少个三角形？
 
 <svg width="350" height="280" viewBox="0 0 350 280" xmlns="http://www.w3.org/2000/svg">
-  <!-- 4行三角形网格 -->
   <g transform="translate(175, 40)">
-    <!-- 第1行 -->
     <polygon points="0,0 -20,35 20,35" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-
-    <!-- 第2行 -->
     <polygon points="-20,35 -40,70 0,70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <polygon points="-20,35 0,70 20,35" fill="#fef3c7" stroke="#2563eb" stroke-width="2"/>
     <polygon points="20,35 0,70 40,70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-
-    <!-- 第3行 -->
     <polygon points="-40,70 -60,105 -20,105" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <polygon points="-40,70 -20,105 0,70" fill="#fef3c7" stroke="#2563eb" stroke-width="2"/>
     <polygon points="0,70 -20,105 20,105" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <polygon points="0,70 20,105 40,70" fill="#fef3c7" stroke="#2563eb" stroke-width="2"/>
     <polygon points="40,70 20,105 60,105" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-
-    <!-- 第4行 -->
     <polygon points="-60,105 -80,140 -40,140" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <polygon points="-60,105 -40,140 -20,105" fill="#fef3c7" stroke="#2563eb" stroke-width="2"/>
     <polygon points="-20,105 -40,140 0,140" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -604,8 +582,6 @@ a=7：b=1 → 717 ✓
     <polygon points="20,105 40,140 60,105" fill="#fef3c7" stroke="#2563eb" stroke-width="2"/>
     <polygon points="60,105 40,140 80,140" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
   </g>
-
-  <!-- 标注 -->
   <text x="175" y="200" font-size="14" fill="#374151" text-anchor="middle">朝上三角形（蓝色）+ 朝下三角形（黄色）</text>
   <text x="175" y="220" font-size="12" fill="#2563eb" text-anchor="middle">数一数：不同大小的三角形都要计入</text>
 </svg>`,

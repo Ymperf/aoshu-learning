@@ -33,10 +33,8 @@ export const grade2Contents: Record<string, TopicContent> = {
         problem: `一条路长 100 米，每隔 10 米种一棵树，两端都种，共需种多少棵树？
 
 <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- 路线 -->
   <line x1="50" y1="60" x2="350" y2="60" stroke="#94a3b8" stroke-width="2"/>
 
-  <!-- 树（11棵） -->
   <circle cx="50" cy="60" r="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
   <circle cx="80" cy="60" r="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
   <circle cx="110" cy="60" r="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
@@ -49,13 +47,11 @@ export const grade2Contents: Record<string, TopicContent> = {
   <circle cx="320" cy="60" r="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
   <circle cx="350" cy="60" r="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
 
-  <!-- 间隔标注 -->
   <line x1="50" y1="85" x2="80" y2="85" stroke="#2563eb" stroke-width="1.5"/>
   <line x1="50" y1="80" x2="50" y2="90" stroke="#2563eb" stroke-width="1.5"/>
   <line x1="80" y1="80" x2="80" y2="90" stroke="#2563eb" stroke-width="1.5"/>
   <text x="65" y="105" font-size="12" fill="#2563eb" text-anchor="middle">10米</text>
 
-  <!-- 标注 -->
   <text x="50" y="35" font-size="12" fill="#dc2626" text-anchor="middle">1</text>
   <text x="350" y="35" font-size="12" fill="#dc2626" text-anchor="middle">11</text>
   <text x="200" y="20" font-size="14" fill="#374151" text-anchor="middle">100米的路</text>
@@ -72,15 +68,12 @@ export const grade2Contents: Record<string, TopicContent> = {
         problem: `一根木料长 8 米，要锯成 2 米一段，需要锯几次？
 
 <svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- 木料 -->
   <rect x="50" y="30" width="300" height="40" fill="#d97706" stroke="#92400e" stroke-width="2"/>
 
-  <!-- 锯痕（3次） -->
   <line x1="125" y1="25" x2="125" y2="75" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
   <line x1="200" y1="25" x2="200" y2="75" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
   <line x1="275" y1="25" x2="275" y2="75" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
 
-  <!-- 标注 -->
   <text x="87" y="55" font-size="14" fill="#fff" text-anchor="middle">2米</text>
   <text x="162" y="55" font-size="14" fill="#fff" text-anchor="middle">2米</text>
   <text x="237" y="55" font-size="14" fill="#fff" text-anchor="middle">2米</text>
@@ -355,7 +348,6 @@ n = **1.5 年（即1年半前）**
         problem: `用4个边长为1cm的小正方形，能拼出哪些不同形状的图形？各自的周长是多少？
 
 <svg width="400" height="280" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-  <!-- 1×4 长条形 -->
   <g transform="translate(50, 20)">
     <rect x="0" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <rect x="30" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -364,7 +356,6 @@ n = **1.5 年（即1年半前）**
     <text x="60" y="50" font-size="12" fill="#374151" text-anchor="middle">1×4 长条 (周长10)</text>
   </g>
 
-  <!-- 2×2 正方形 -->
   <g transform="translate(220, 20)">
     <rect x="0" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <rect x="30" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -373,7 +364,6 @@ n = **1.5 年（即1年半前）**
     <text x="30" y="75" font-size="12" fill="#374151" text-anchor="middle">2×2 正方形 (周长8)</text>
   </g>
 
-  <!-- L形 -->
   <g transform="translate(50, 120)">
     <rect x="0" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <rect x="30" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -382,7 +372,6 @@ n = **1.5 年（即1年半前）**
     <text x="45" y="75" font-size="12" fill="#374151" text-anchor="middle">L形 (周长10)</text>
   </g>
 
-  <!-- T形 -->
   <g transform="translate(220, 120)">
     <rect x="0" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <rect x="30" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -391,7 +380,6 @@ n = **1.5 年（即1年半前）**
     <text x="45" y="75" font-size="12" fill="#374151" text-anchor="middle">T形 (周长10)</text>
   </g>
 
-  <!-- Z形 -->
   <g transform="translate(50, 220)">
     <rect x="0" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
     <rect x="30" y="0" width="30" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
@@ -418,7 +406,6 @@ Z形：周长 = **10 cm**
         problem: `一个平行四边形，底边长 6cm，高 4cm，将它剪拼成一个长方形，长方形的长和宽各是多少？
 
 <svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
-  <!-- 平行四边形 -->
   <g transform="translate(50, 30)">
     <polygon points="20,0 120,0 100,60 0,60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
     <line x1="20" y1="0" x2="20" y2="60" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
@@ -427,13 +414,11 @@ Z形：周长 = **10 cm**
     <text x="60" y="85" font-size="12" fill="#374151" text-anchor="middle">平行四边形</text>
   </g>
 
-  <!-- 箭头 -->
   <g transform="translate(180, 60)">
     <line x1="0" y1="0" x2="30" y2="0" stroke="#374151" stroke-width="2"/>
     <polygon points="30,0 25,5 25,-5" fill="#374151"/>
   </g>
 
-  <!-- 长方形 -->
   <g transform="translate(240, 30)">
     <rect x="0" y="0" width="100" height="60" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
     <text x="50" y="35" font-size="14" fill="#92400e" text-anchor="middle">长6cm</text>
